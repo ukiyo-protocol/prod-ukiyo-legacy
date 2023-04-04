@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.comn-heading {
+  position: relative;
+}
+.comn-heading .comn-heading__subtxt {
+  position: absolute;
+  top: -7.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 12.2rem;
+  color: #000;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .comn-heading .comn-heading__subtxt {
+    font-size: 8rem;
+    top: -4.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .comn-heading .comn-heading__subtxt {
+    font-size: 5rem;
+    top: -3rem;
+  }
+}
+.comn-heading--token .title-main {
+  color: #ffffff;
+}
+.comn-heading--token__subtxt {
+  color: rgba(255, 255, 255, 0.031372549);
+}/*# sourceMappingURL=CommonHeading.css.map */

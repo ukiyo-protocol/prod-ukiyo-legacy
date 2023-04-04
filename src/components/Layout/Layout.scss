@@ -1,0 +1,283 @@
+@import "../../assets/_var.scss";
+
+.adminLayout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $white;
+
+  .adminRight_Sec {
+    width: 100%;
+    padding-bottom: 45px;
+    padding-left: 350px;
+
+    @media (max-width: 1439px) {
+      padding-left: 280px;
+    }
+
+    @media (max-width: 991px) {
+      padding-left: unset;
+    }
+
+    .container {
+      max-width: 1410px;
+    }
+  }
+
+  .adminInner_wrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: calc(100% - 116px);
+  }
+}
+
+// auth layout section
+
+.authLayout {
+  background-color: $secondaryColor;
+
+
+  .headerStyle {
+    &.navbar {
+      @media (max-width: 991px) {
+        background-color: $baseColor;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 0 30px;
+
+        .navbar-brand {
+          width: 120px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .authCol_left {
+    background: $baseColor url(../../assets/Images/authBg.png) no-repeat;
+    background-size: 100% 100%;
+
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+  }
+
+  .authCol {
+    padding: 120px 30px 25px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width:767px) {
+      padding: 70px 0 25px;
+    }
+  }
+
+  .authLayout_left {
+    text-align: center;
+
+    @media (max-width: 1440px) {
+      max-width: 400px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .authleft_content {
+      padding-top: 120px;
+      max-width: 500px;
+
+      h4 {
+        font-size: 22px;
+        font-weight: 500;
+        color: $white;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+
+  .authCol_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .backBtn {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      position: absolute;
+      left: 9%;
+
+      @media (max-width: 1199px) {
+        left: 0;
+      }
+
+      &:hover {
+        svg {
+          fill: $lightRed;
+        }
+      }
+
+      @media (max-width:767px) {
+        margin-top: 15px;
+      }
+    }
+
+    .authCopyrt_Txt {
+      margin-bottom: 0;
+      font-size: 12px;
+      font-weight: 500;
+      color: #b1b5c4;
+    }
+
+    .authLayout_right {
+      width: 100%;
+      max-width: 435px;
+      padding-top: 45px;
+
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+
+      .headText {
+        margin-bottom: 45px;
+
+        @media (max-width: 767px) {
+          margin-bottom: 25px;
+        }
+
+        h2 {
+          color: $black;
+          font-size: 30px;
+          font-weight: 600;
+          margin-bottom: 10px;
+
+          @media (max-width: 767px) {
+            font-size: 24px;
+            margin-bottom: 5px;
+          }
+
+          span {
+            color: $lightRed;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 300;
+          color: rgba(0, 0, 0, 0.6);
+          margin-bottom: 0;
+
+          @media (max-width: 767px) {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .frgtLink {
+        text-align: right;
+        margin-top: -10px;
+        margin-bottom: 50px;
+
+        a {
+          font-size: 16px;
+          text-decoration: none;
+          color: $textBlack;
+          transition: all 0.15s linear;
+
+          @media (max-width: 767px) {
+            font-size: 13px;
+          }
+
+          &:hover {
+            color: $lightRed;
+          }
+        }
+      }
+
+      .registerLink {
+        padding-top: 20px;
+        margin-bottom: 0;
+        font-size: 16px;
+        $textExtraDark: #0d0c19;
+        font-weight: 400;
+        text-align: center;
+
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $lightRed;
+          transition: all 0.15s linear;
+
+          &:hover {
+            color: $textDark;
+          }
+        }
+      }
+
+      .authBtn {
+        color: $white;
+        font-size: 16px;
+        font-weight: 500;
+        width: 100%;
+        line-height: 29px;
+
+        @media (max-width: 767px) {
+          font-size: 13px;
+          line-height: 22px;
+        }
+
+        &:hover {
+          color: $lightRed;
+        }
+      }
+    }
+  }
+
+  @media (min-width:992px) {
+    padding: 0 !important;
+  }
+}
+
+.auth-controller {
+  .header-style {
+    @media(max-width: 991px) {
+      background-image: url("../../assets/Images/UKIYO-red.svg");
+      background-size: 100px;
+      background-position: 20px center;
+      background-repeat: no-repeat;
+    }
+
+    .navbar-brand {
+      @media(max-width: 991px) {
+        visibility: hidden;
+      }
+    }
+
+    @media (max-width:991px) {
+      // background-color: $hardbg;
+
+      .container {
+        justify-content: center;
+      }
+
+    }
+  }
+
+
+}

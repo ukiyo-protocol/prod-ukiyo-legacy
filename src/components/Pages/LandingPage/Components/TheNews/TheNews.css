@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.The-NewsSec {
+  background: hsl(200deg, 39%, 95%);
+  padding: 5rem 0;
+}
+@media (max-width: 767px) {
+  .The-NewsSec {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 991px) {
+  .The-NewsSec .fea_pro_heading {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .The-NewsSec .fea_pro_heading {
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .The-NewsSec .fea_pro_heading h2 {
+    margin-bottom: 0.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .The-NewsSec .fea_pro_heading h2 {
+    text-align: center !important;
+  }
+}
+.The-NewsSec .fea_pro_heading .btnGradient {
+  background: linear-gradient(270deg, #e9666b 0%, #ff5b62 100%);
+  border-color: #ff6066;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+.The-NewsSec .news-post {
+  background: white;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.0784313725);
+  border: 0.5px solid #ffffff;
+  border-radius: 30px;
+  padding: 48px 23px;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+.The-NewsSec .news-post:last-child {
+  margin-bottom: unset;
+}
+@media (max-width: 991px) {
+  .The-NewsSec .news-post {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .The-NewsSec .news-post {
+    padding: 30px 15px;
+  }
+}
+.The-NewsSec .news-post .heading {
+  display: flex;
+  justify-content: space-between;
+}
+.The-NewsSec .news-post .heading h3 {
+  font-size: 27px;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .The-NewsSec .news-post .heading h3 {
+    font-size: 20px;
+    font-weight: 900;
+  }
+}
+@media (max-width: 479px) {
+  .The-NewsSec .news-post .heading h3 {
+    font-size: 16px;
+    font-weight: 900;
+  }
+}
+.The-NewsSec .news-post .heading .news_button {
+  background: none;
+  border: none;
+  width: 10%;
+}
+.The-NewsSec .news-post .heading .news_button img {
+  transition: all ease-in-out 0.3s;
+}
+.The-NewsSec .news-post:hover .heading .news_button img {
+  margin-left: 2rem;
+}
+@media (max-width: 767px) {
+  .The-NewsSec .news-post .news_row {
+    display: block !important;
+  }
+}
+.The-NewsSec .news-post .news_row p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 45px;
+}
+@media (max-width: 767px) {
+  .The-NewsSec .news-post .news_row p {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=TheNews.css.map */

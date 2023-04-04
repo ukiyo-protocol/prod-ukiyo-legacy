@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.sidebarStyle.pro-sidebar {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.25s linear;
+  height: 100vh;
+  position: fixed;
+}
+@media (max-width: 360px) {
+  .sidebarStyle.pro-sidebar {
+    width: 100%;
+  }
+}
+.sidebarStyle.pro-sidebar.collapsed {
+  width: 0;
+  min-width: 0;
+}
+.sidebarStyle.pro-sidebar .pro-sidebar-inner {
+  background: #0d4842 !important;
+}
+.sidebarStyle.pro-sidebar .pro-sidebar-header {
+  padding: 2.5rem;
+}
+@media (max-width: 767px) {
+  .sidebarStyle.pro-sidebar .pro-sidebar-header {
+    padding: 1.8rem;
+  }
+}
+.sidebarStyle.pro-sidebar .pro-sidebar-header img {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .sidebarStyle.pro-sidebar .pro-sidebar-header img {
+    padding-left: 7rem;
+  }
+}
+@media (max-width: 480px) {
+  .sidebarStyle.pro-sidebar .pro-sidebar-header img {
+    width: 80%;
+  }
+}
+.sidebarStyle.pro-sidebar .pro-menu a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s linear;
+}
+.sidebarStyle.pro-sidebar .pro-menu a:hover {
+  color: #fff;
+}
+.sidebarStyle.pro-sidebar .pro-menu .pro-menu-item {
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.sidebarStyle.pro-sidebar .pro-menu .pro-menu-item .pro-inner-item {
+  padding: 1.2rem 2.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s linear;
+}
+.sidebarStyle.pro-sidebar .pro-menu .pro-menu-item .pro-inner-item:hover {
+  color: #fff;
+}
+.sidebarStyle.pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu .pro-inner-list-item {
+  background: #438d87;
+}
+
+.closemenu {
+  display: none;
+}
+@media (max-width: 991px) {
+  .closemenu {
+    position: fixed;
+    display: inline-block;
+    top: 1.7rem;
+    left: 2.5rem;
+    z-index: 9999;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #438d87;
+    border-radius: 50%;
+    color: #ffffff;
+  }
+}
+@media (max-width: 991px) and (max-width: 767px) {
+  .closemenu {
+    top: 8px;
+  }
+}
+@media (max-width: 991px) and (max-width: 567px) {
+  .closemenu {
+    width: 4rem;
+    height: 4rem;
+    top: 1rem;
+  }
+}
+.closemenu img {
+  width: 2rem;
+  height: 2rem;
+}/*# sourceMappingURL=SidebarStyle.css.map */

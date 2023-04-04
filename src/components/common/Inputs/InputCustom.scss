@@ -1,0 +1,61 @@
+@import "../../../assets/_var.scss";
+
+.enter-amount-wrap {
+  height: 4rem;
+  display: flex;
+  background: $white;
+
+  .customInput {
+    flex: 1 0;
+  }
+
+  .form-control {
+    color: $black;
+    background: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black;
+      box-shadow: unset;
+    }
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border: 0;
+    color: $black;
+    line-height: 1.8rem;
+    height: 100%;
+    caret-color: $black;
+
+    @media(max-width: 1199px) {
+      font-size: 1.4rem;
+    }
+
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+
+  .form-select {
+    width: 16rem;
+    font-weight: 500;
+    background: $white;
+    background-image: url(../../../assets/Images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center right 1.5rem;
+    background-size: 1.5rem;
+
+    &:focus {
+      box-shadow: unset;
+    }
+
+    option {
+      padding: 1rem;
+      color: $black;
+    }
+  }
+}

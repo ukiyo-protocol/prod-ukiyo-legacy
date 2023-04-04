@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.btnStyle {
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 1.2rem 5.8rem;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 130px;
+  transition: all 0.25s linear;
+}
+@media (max-width: 767px) {
+  .btnStyle {
+    padding: 10px 15px;
+    font-size: 11px;
+    min-width: 95px;
+  }
+}
+@media (max-width: 480px) {
+  .btnStyle {
+    min-width: 70px;
+  }
+}/*# sourceMappingURL=ButtonStyle.css.map */

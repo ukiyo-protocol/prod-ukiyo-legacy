@@ -1,0 +1,14 @@
+@import "../../../../assets/_var.scss";
+.Password_Input {
+    position: relative;
+
+    .form-control {
+        padding-right: 5rem;
+    }
+
+    img {
+        position: absolute;
+        right: 2rem;
+        top: 5.3rem;
+    }
+}

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.adminLogin {
+  height: 100%;
+  background-color: #f8f8f8;
+}
+.adminLogin .adminHeader {
+  width: 100%;
+}
+.adminLogin .log_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.adminLogin .log_in .loginDiv {
+  position: relative;
+  width: 100%;
+  min-height: 20rem;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  background: #438d87;
+  padding: 2rem;
+  border-radius: 2.2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.adminLogin .log_in .loginDiv .loginDiv_top {
+  width: 100%;
+}
+.adminLogin .log_in .loginDiv .loginDiv_top h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.adminLogin .log_in .loginDiv .loginDiv_top .form-control {
+  padding: 1rem 2.5rem;
+  border-radius: 1.2rem;
+  font-size: 16px;
+  color: #000;
+  border: 0;
+  font-size: 15px;
+}
+.adminLogin .log_in .loginDiv .loginDiv_top .form-control:disabled, .adminLogin .log_in .loginDiv .loginDiv_top .form-control[readonly] {
+  background-color: #ffffff;
+}
+.adminLogin .log_in .loginDiv .loginDiv_top .form-control::-moz-placeholder {
+  color: #000;
+}
+.adminLogin .log_in .loginDiv .loginDiv_top .form-control:-ms-input-placeholder {
+  color: #000;
+}
+.adminLogin .log_in .loginDiv .loginDiv_top .form-control::placeholder {
+  color: #000;
+}
+.adminLogin .log_in .loginDiv .cmnBtn {
+  position: absolute;
+  bottom: 20px;
+}/*# sourceMappingURL=Login.css.map */

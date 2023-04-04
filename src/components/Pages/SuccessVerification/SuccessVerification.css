@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.success {
+  height: 100vh;
+  background: url("../../../assets/Images/mainBg.png");
+}
+.success_verification {
+  border: 2px solid #ff6066;
+  border-radius: 2rem;
+  background: url("../../../assets/Images/mainBg.png");
+  max-width: 70rem;
+  text-align: center;
+  padding: 5rem;
+  margin: 0 3rem;
+}
+@media (max-width: 480px) {
+  .success_verification {
+    padding: 2rem;
+  }
+}
+.success_verification p {
+  color: #ffffff;
+  font-size: 2.4rem;
+  padding: 2rem 0;
+}
+@media (max-width: 480px) {
+  .success_verification p {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=SuccessVerification.css.map */

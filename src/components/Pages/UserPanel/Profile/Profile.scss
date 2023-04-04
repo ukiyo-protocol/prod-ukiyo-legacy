@@ -1,0 +1,20 @@
+@import "../../../../assets/_var.scss";
+
+.profile-detail {
+  padding: 30px;
+  height: 100%;
+}
+
+.email_sec {
+  .form-control {
+
+    &:focus,
+    &:focus-visible {
+      box-shadow: unset;
+      border-color: unset;
+      outline: unset;
+      border: 1px solid transparent;
+      // color: transparent;
+    }
+  }
+}

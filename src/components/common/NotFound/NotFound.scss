@@ -1,0 +1,31 @@
+@import '../../../assets/_var.scss';
+
+.not_found {
+    padding: 120px 0;
+
+    .Notfound_content {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        background: white;
+        box-shadow: 0px 3px 20px rgb(0 0 0 / 8%);
+        border: 0.5px solid #ffffff;
+        border-radius: 30px;
+        padding: 48px 23px;
+        h2 {
+            color: $black;
+            font-size: 8rem;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 3.6rem;
+            margin-bottom: 0;
+        }
+
+        .removed_page {
+            font-size: 2.2rem;
+        }
+    }
+
+}

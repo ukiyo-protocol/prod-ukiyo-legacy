@@ -1,0 +1,164 @@
+@import "../../../../../assets/_var.scss";
+
+.investSec {
+  // padding: 215px 0 175px;
+  position: relative;
+  background-color: #eff5f8;
+
+  @media (max-width: 1199px) {
+    padding: 120px 0;
+    background: url("../../../../../assets/Images/product-bg.svg") no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 1199px) {
+    margin-top: -60px;
+    padding: 100px 0 0;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 0;
+    // padding: 100px 0 5px;
+  }
+
+  .investSec_stats {
+    background: transparent;
+
+    .protocol_state {
+      background-color: $white;
+      padding: 5rem 5rem;
+      border-radius: 2rem;
+      margin-top: -12rem;
+      box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 24px;
+
+      @media (max-width: 1199px) {
+        margin-top: -22rem;
+      }
+
+      @media (max-width: 767px) {
+        padding: 4rem 2rem;
+        margin-top: -16rem;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        color: $textExtraDark;
+
+        @media (max-width: 1199px) {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 2.4rem;
+          text-align: center;
+        }
+      }
+
+      .state_value {
+        margin-top: 4.4rem;
+
+        @media (max-width: 1199px) {
+          margin-top: 2.4rem;
+        }
+
+        ul {
+          padding-left: 0;
+          flex-wrap: wrap;
+          margin-bottom: 0;
+
+          @media (max-width: 575px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center !important;
+          }
+
+          li {
+            width: 180px;
+            text-align: center;
+            list-style: none;
+
+            @media (max-width: 767px) {
+              margin-bottom: 2.2rem;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+
+            p {
+              margin-bottom: 0;
+              font-size: 1.6rem;
+              color: $black;
+
+              @media(max-width: 767px) {
+                opacity: 0.4;
+                font-size: 1.4rem;
+                margin-bottom: 1.4rem;
+              }
+            }
+
+            h3 {
+              color: $textExtraDark;
+              font-size: 2.8rem;
+              font-weight: 700;
+              margin-bottom: 0;
+
+              @media (max-width: 991px) {
+                font-size: 2.4rem;
+              }
+
+
+            }
+          }
+        }
+      }
+    }
+
+    // @media (max-width: 1439px) {
+    //   top: -65px;
+    // }
+    // @media (max-width: 1300px) {
+    //   top: -120px;
+    // }
+    // @media (max-width: 1199px) {
+    //   padding: 20px 60px;
+    // }
+
+    // @media (max-width: 767px) {
+    //   padding: 20px;
+    // }
+  }
+
+  .investSec_content {
+    align-items: center;
+
+    .investSec_left {
+      @media (max-width: 991px) {
+        text-align: center;
+      }
+
+      img {
+        @media (max-width: 1440px) {
+          width: 100%;
+        }
+
+        @media (max-width: 991px) {
+          max-width: 450px;
+        }
+      }
+    }
+
+    .investSec_Right {
+      padding-top: 100px;
+
+      @media (max-width: 1199px) {
+        padding-top: 50px;
+      }
+    }
+  }
+}
+
+.protocol_btn {
+  margin-right: 2rem;
+}

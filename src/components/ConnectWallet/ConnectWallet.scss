@@ -1,0 +1,88 @@
+@import "../../assets/_var.scss";
+
+.connect_wallet {
+  .modal-dialog {
+    display: flex;
+    flex: 1;
+    height: auto;
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 2rem 2.5rem;
+    }
+
+    .modal-content {
+      background: $darkBg;
+      color: $white;
+      border-radius: 1rem;
+      .modal-header {
+        border-bottom: 0;
+        padding: 2rem 2rem 1.5rem;
+        .modal-title {
+          font-size: 4rem;
+          font-weight: 400;
+        }
+        .btn-close {
+          background: url(../../assets/Images/close.svg) center no-repeat;
+          outline: none;
+          position: absolute;
+          z-index: 9;
+          right: 2.5rem;
+          opacity: 1;
+          &:focus {
+            box-shadow: unset;
+            outline: unset;
+          }
+        }
+      }
+      .connect_options {
+        ul {
+          li {
+            display: block;
+            margin: 2rem 0;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .btn {
+              color: $white;
+              display: block;
+              background: $greenclr;
+              position: relative;
+              border: 0;
+              text-align: left;
+              font-size: 1.8rem;
+              font-weight: 700;
+              width: 100%;
+              padding: 2rem;
+              border-radius: 1.4rem;
+
+              &:hover {
+                background: $textlight-2;
+                border: 0;
+              }
+
+              span {
+                background-color: #ffffffeb;
+                display: block;
+                width: 4rem;
+                height: 4rem;
+                display: flex;
+                position: absolute;
+                right: 2rem;
+                top: 1.1rem;
+                border-radius: 0.6rem;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                  width: 2.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

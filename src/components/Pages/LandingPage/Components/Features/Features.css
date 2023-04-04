@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+.features_sec {
+  position: relative;
+  background: #0f2c3a;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media (max-width: 991px) {
+  .features_sec {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .features_sec {
+    padding: 5rem 0 4rem;
+  }
+}
+.features_sec .features .features_right {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .features_sec .features .features_right {
+    margin-bottom: 3rem;
+  }
+}
+.features_sec .features .features_right .features_images {
+  margin-bottom: 2rem;
+}
+.features_sec .features .features_right .features_images img {
+  max-width: 15rem;
+  margin: 0 auto;
+}
+.features_sec .features .features_right p {
+  color: #ffffff;
+  font-size: 1.6rem;
+  max-width: 272px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .features_sec .features .features_right p {
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+}
+.features_sec .features .row > div {
+  padding: 0 3rem;
+}
+.features_sec .features .Slick-area {
+  display: flex;
+  align-items: baseline;
+}
+.features_sec .features .Slick-area button.slick-arrow.slick-prev {
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(calc(-100% - 10px));
+}
+@media (max-width: 767px) {
+  .features_sec .features .Slick-area button.slick-arrow.slick-prev {
+    top: 100%;
+  }
+}
+.features_sec .features .Slick-area button.slick-arrow.slick-prev::before {
+  color: #ffffff;
+}
+.features_sec .features .Slick-area button.slick-arrow.slick-next {
+  position: absolute;
+  right: 50%;
+  top: 110%;
+  transform: translateX(calc(100% + 10px));
+}
+@media (max-width: 767px) {
+  .features_sec .features .Slick-area button.slick-arrow.slick-next {
+    top: 100%;
+  }
+}
+.features_sec .features .Slick-area button.slick-arrow.slick-next::before {
+  color: #ffffff;
+}/*# sourceMappingURL=Features.css.map */

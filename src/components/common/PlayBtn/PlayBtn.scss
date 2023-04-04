@@ -1,0 +1,28 @@
+@import "../../../assets/_var.scss";
+
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__btn {
+    margin: 0 auto 10px;
+    width: 85px;
+    height: 85px;
+    border: 4px solid $white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 30px;
+    }
+  }
+  p {
+    font-weight: 500;
+  }
+}

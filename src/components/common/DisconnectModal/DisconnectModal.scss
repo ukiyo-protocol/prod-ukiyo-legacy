@@ -1,0 +1,47 @@
+@import "../../../assets/_var.scss";
+
+.disconnect_modal {
+  .modal-content {
+    border-radius: 15px;
+    max-width: 500px;
+    // min-height: 120px;
+    // border: none;
+    background-color: $gradient-img;
+  }
+  .modal-header {
+    display: flex;
+    border: none;
+    justify-content: space-evenly;
+    // background-color: $gradient-img;
+    padding: 10px 0 20px 110px;
+    border-radius: 12px 12px 0 0;
+    @media (max-width: 576px) {
+      padding: 0 0 0 40px;
+    }
+    .modal-title {
+      font-size: 24px;
+      color: $white;
+      margin: 0;
+    }
+    .btn-close {
+      filter: invert(1);
+      width: 40px;
+      height: 40px;
+      &:focus {
+        box-shadow: unset;
+        outline: none;
+      }
+    }
+  }
+  .modal-body {
+    background-color: $textDark;
+    color: $white;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+  }
+  .modal-footer {
+    border: none;
+    border-radius: 0 0 12px 12px;
+    padding: 10px 0 10px 0;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../assets/_var.scss";
+
+.confirm-modal {
+  border-radius: 2rem;
+  padding: 5rem;
+  .modal-content {
+    border-radius: 2rem;
+    p {
+      font-size: 1.4rem !important;
+      // color: rgba(0, 0 0.4) !important;
+      // padding: 0 7px;
+    }
+    .cancel_btn {
+      border: 1px solid $lightRed;
+      color: $lightRed;
+      background: transparent;
+      &:hover {
+        background: linear-gradient(270deg, #e9666b 0%, #ff5b62 100%);
+        border-color: $lightRed;
+        color: $white;
+        border: 1px solid transparent;
+      }
+    }
+  }
+}

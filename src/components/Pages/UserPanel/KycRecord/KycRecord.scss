@@ -1,0 +1,19 @@
+@import "../../../../assets/_var.scss";
+
+.verification-card {
+  padding: 80px 30px;
+  width: 100%;
+  max-width: 474px;
+
+  h4 {
+    color: $black;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    color: $textBlack;
+    margin-bottom: 50px;
+  }
+}

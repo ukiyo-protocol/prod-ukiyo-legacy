@@ -1,0 +1,30 @@
+@import "../../../assets/_var.scss";
+
+.success {
+  height: 100vh;
+  background: url("../../../assets/Images/mainBg.png");
+
+  &_verification {
+    border: 2px solid $white;
+    border-radius: 2rem;
+    background: url("../../../assets/Images/mainBg.png");
+    max-width: 70rem;
+    text-align: center;
+    padding: 5rem;
+    margin: 0 3rem;
+
+    @media (max-width: 480px) {
+      padding: 2rem;
+    }
+
+    p {
+      color: $white;
+      font-size: 2.4rem;
+      padding: 2rem 0;
+
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
+    }
+  }
+}

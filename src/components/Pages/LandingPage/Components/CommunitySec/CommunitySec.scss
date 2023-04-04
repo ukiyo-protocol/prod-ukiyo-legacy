@@ -1,0 +1,57 @@
+@import "../../../../../assets/_var.scss";
+
+.comunity_sec {
+    padding: 7.4rem 0 0 0;
+    background-color: #EFF5F8;
+    text-align: center;
+
+    @media(max-width: 767px) {
+        padding: 4.2rem 0 0 0;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 700;
+
+        @media (max-width:767px) {
+            font-size: 2.4rem;
+            font-weight: 600;
+        }
+    }
+
+    .govern_btn {
+        margin-bottom: 8rem;
+        background-color: $lightRed;
+        color: $white;
+        font-weight: 400;
+
+        @media(max-width: 767px) {
+
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    .community_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 80rem;
+        }
+    }
+
+    .community_content {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: center;
+        color: #000000;
+        margin: 2.4rem 0 4rem 0;
+
+        @media(max-width: 767px) {
+            margin: 1.6rem 0 2.2rem;
+            font-size: 1.4rem;
+        }
+    }
+}

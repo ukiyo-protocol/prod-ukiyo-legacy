@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.product_sec {
+  background: url("../../../../../assets/Images/product-bg.svg") no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+.product_heading h2 {
+  color: #0d0c19;
+  font-size: 3rem;
+}
+
+.product .product_img {
+  height: 100%;
+  text-align: center;
+  background-image: radial-gradient(farthest-corner at 37px 82px, #355f70 0%, #0d2a35 42%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 3rem;
+  padding: 10rem 3rem;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .product .product_img {
+    padding: 5rem 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .product .product_img {
+    margin-bottom: 2rem;
+    padding: 3rem;
+  }
+}
+@media (max-width: 575px) {
+  .product .product_img {
+    padding: 2rem;
+  }
+}
+.product .product_img .product_content {
+  padding: 30px;
+}
+@media (max-width: 991px) {
+  .product .product_img .product_content {
+    padding: 10px;
+  }
+}
+.product .product_img .product_content .product_logo {
+  width: 171px;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .product .product_img .product_content .product_logo {
+    width: 130px;
+  }
+}
+@media (max-width: 575px) {
+  .product .product_img .product_content .product_logo img {
+    max-width: 70%;
+  }
+}
+.product .product_img .product_content h4 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1.4rem;
+  margin-top: 1rem;
+}
+@media (max-width: 767px) {
+  .product .product_img .product_content h4 {
+    font-size: 2rem;
+  }
+}
+.product .product_img .product_content p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 3.8rem;
+  max-width: 340px;
+}
+@media (max-width: 767px) {
+  .product .product_img .product_content p {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+}
+.product .product_img .product_content .btnGradient {
+  background: linear-gradient(270deg, #e9666b 0%, #ff5b62 100%);
+  border-color: #ff6066;
+  color: #ffffff;
+  border: 1px solid transparent;
+  padding: 1.05rem 3.8rem;
+}
+.product .product_img .product_content .btnGradient:hover {
+  background: transparent;
+  color: #ff6066;
+  border: 1px solid #ff6066;
+}/*# sourceMappingURL=AboutSec.css.map */

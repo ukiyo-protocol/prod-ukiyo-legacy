@@ -1,0 +1,40 @@
+@import "../../../assets/_var.scss";
+
+.checkbox_Style {
+  // text-align: center;
+
+  .form-check {
+    margin-bottom: 10px;
+
+    .form-check-input {
+      width: 16px;
+      height: 16px;
+      border-color: $lightRed;
+      background-color: transparent;
+
+      &:checked {
+        background-color: $lightRed;
+      }
+
+      &:focus {
+        box-shadow: unset;
+      }
+    }
+
+    .form-check-label {
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 400;
+      color: $textBlack;
+
+      a {
+        color: $lightRed;
+        text-decoration: none;
+
+        &:hover {
+          color: $textDark;
+        }
+      }
+    }
+  }
+}

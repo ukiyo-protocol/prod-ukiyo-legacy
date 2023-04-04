@@ -1,0 +1,47 @@
+@import "../../../assets/_var.scss";
+@import "../ConnectWallet/ConnectWallet.scss";
+
+.buy_token {
+  .form-text {
+    font-size: 1.4rem;
+    color: $light-white;
+  }
+  // .input-group {
+  //   height: 5rem;
+  //   border-radius: 1rem;
+
+  //   .form-control {
+  //     font-size: 1.6rem;
+  //     padding: 1rem 2rem;
+  //     background: $gradientClr-4;
+  //     border: 0;
+  //     color: $white;
+
+  //     &:focus {
+  //       box-shadow: unset;
+  //     }
+  //   }
+
+  //   .dropdown-toggle {
+  //     border: 0;
+  //     min-width: 15rem;
+  //     font-size: 1.6rem;
+  //     font-weight: 500;
+  //     background: $gradientClr;
+
+  //     &::after {
+  //       position: absolute;
+  //       right: 1.5rem;
+  //       top: 50%;
+  //       transform: translateY(-50%);
+  //     }
+  //   }
+  //   .dropdown-menu {
+  //     min-width: 15rem;
+  //     font-size: 1.4rem;
+  //     font-weight: 500;
+  //     .dropdown-item {
+  //     }
+  //   }
+  // }
+}

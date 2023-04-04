@@ -1,0 +1,122 @@
+@import "../../../../../assets/_var.scss";
+
+.product_sec {
+  background: url("../../../../../assets/Images/product-bg.svg") no-repeat;
+  background-size: cover;
+  padding: 10rem 0;
+
+  @media(max-width: 767px) {
+    padding: 4rem 0;
+  }
+}
+
+.product_heading {
+  h2 {
+    color: $textExtraDark;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 767px) {
+      font-size: 2.4rem;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 2.4rem;
+
+    }
+  }
+}
+
+.product {
+  .row {
+    row-gap: 1.6rem;
+
+    .product_img {
+      height: 100%;
+      text-align: center;
+      // background: url("../../../../../assets/Images/product-content-bg.svg") no-repeat;
+      // background-size: 100% 100%;
+      // background: linear-gradient(133deg, #355f70 -67%, #0d2a35 55%);
+      background-image: $gradient-img;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      border-radius: 3rem;
+      padding: 6rem 3rem;
+      overflow: hidden;
+
+      @media (max-width: 1199px) {
+        padding: 5rem 3rem;
+      }
+
+      @media (max-width: 767px) {
+        // margin-bottom: 2rem;
+        padding: 4rem 1.6rem;
+      }
+
+      .product_content {
+        .product_logo {
+          max-width: 17rem;
+          width: 100%;
+          margin: 0 auto 2.4rem;
+
+          @media (max-width: 767px) {
+            max-width: 12.4rem;
+          }
+        }
+
+        h4 {
+          font-size: 2.7rem;
+          font-weight: 500;
+          color: $white;
+          margin-bottom: 2.4rem;
+          margin-top: 1rem;
+
+          @media (max-width: 767px) {
+            font-size: 2.4rem;
+            margin-bottom: 1.6rem;
+          }
+        }
+
+        p {
+          font-size: 1.6rem;
+          color: $white;
+          font-weight: 500;
+          max-width: 340px;
+          margin: 0 auto 2.4rem;
+
+          @media (max-width: 767px) {
+            font-weight: 400;
+            font-size: 1.4rem;
+          }
+        }
+
+        .btnGradient {
+          background: $gradientBg;
+          border-color: $lightRed;
+          color: $white;
+          border: 1px solid transparent;
+          padding: 1.05rem 3.8rem;
+          font-size: 1.6rem;
+          font-weight: 500;
+
+          &:hover {
+            background: transparent;
+            color: $lightRed;
+            border: 1px solid $lightRed;
+          }
+        }
+
+        .banner_img {
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.lottoe_sec {
+  max-width: 100%;
+  height: 42.2rem;
+  max-width: 42.2rem;
+}

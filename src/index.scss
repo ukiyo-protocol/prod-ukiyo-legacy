@@ -1,0 +1,329 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./assets/_var.scss";
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $baseBg;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1645px;
+  padding: 0 2.4rem;
+
+  &-fluid {
+    padding: 0 2.4rem;
+  }
+
+  @media (max-width: 1679px) {
+    max-width: 1280px;
+  }
+}
+
+.row {
+  margin: 0 -15px;
+
+  >div {
+    padding: 0 15px;
+  }
+}
+
+html {
+  font-size: 60.6666%;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  color: $black;
+
+  @media (max-width: 1199px) {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 2.2rem;
+  }
+}
+
+.title-main {
+  font-size: 4.4rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  color: $white;
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid #f8931d;
+  display: table;
+
+  &.centerLine {
+    margin: 0 auto 7.5rem;
+
+    @media (max-width: 1199px) {
+      margin: 0 auto 3.5rem;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    font-size: 3.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 2.2rem;
+  }
+}
+
+.sub-text {
+  color: $white;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 0;
+
+  @media (max-width: 1199px) {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+.mb25 {
+  margin-bottom: 2.5rem;
+
+  @media (max-width: 1199px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+section {
+
+  // padding: 0 15px;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.dark-blue {
+  color: $greenclr;
+}
+
+.py-110 {
+  padding-top: 11rem;
+  padding-bottom: 11rem;
+
+  @media (max-width: 1199px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (max-width: 574px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.py-150 {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+
+  @media (max-width: 1199px) {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  @media (max-width: 574px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.common-table {
+  &.table {
+    color: $white;
+    font-size: 1.5rem;
+
+    th {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.err-wrapper {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.admin_head {
+  color: $greenclr;
+  font-weight: 600;
+  margin: 0;
+
+  @media (max-width: 767px) {
+    font-size: 3.4rem;
+  }
+}
+
+body>iframe {
+  pointer-events: none;
+}
+
+.commn-bg {
+  background-color: $secondaryColor;
+  border-radius: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 24px;
+  word-break: break-word;
+
+  @media(max-width: 1600px) {
+    font-size: 24px;
+  }
+
+  @media(max-width: 1400px) {
+    font-size: 18px;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.commn-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: $textDark;
+  line-height: 50px;
+  margin-bottom: 20px;
+
+  span {
+    color: $lightRed2;
+  }
+}
+
+.react-select-custom {
+  border-left: 1px solid #aeb6c2;
+  min-width: 82px;
+
+  .react-select {
+    &__control {
+      border: 0;
+      min-height: 22px;
+      background-image: url(./assets/Images/dropArrow.svg);
+      background-repeat: no-repeat;
+      background-size: 12px;
+      background-position: center right;
+
+      &--is-focused {
+        border: 0;
+        box-shadow: unset;
+      }
+    }
+
+    &__indicators {
+      display: none;
+    }
+
+    &__value-container {
+      padding-left: 15px;
+      padding-right: 30px;
+      font-size: 16px;
+      color: $textDark;
+    }
+
+    &__menu {
+      font-size: 13px;
+    }
+
+    &__option {
+      &--is-selected {
+        background: $lightRed;
+      }
+    }
+  }
+
+  &--filter {
+    border: 0;
+
+    .react-select {
+      &__control {
+        height: 55px;
+        width: 100%;
+        max-width: 174px;
+        border: 1px solid $lightRed2;
+        border-radius: 28px;
+        background-position: center right 28px;
+
+        @media (max-width: 767px) {
+          height: 45px;
+        }
+
+        &:hover {
+          border-color: $lightRed2;
+        }
+      }
+
+      &__value-container {
+        padding: 5px 49px 5px 28px;
+        font-size: 16px;
+        color: $lightRed3;
+
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
+      }
+
+      &__single-value,
+      &__placeholder {
+        color: $lightRed3;
+      }
+    }
+  }
+}

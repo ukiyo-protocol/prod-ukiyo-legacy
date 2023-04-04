@@ -1,0 +1,45 @@
+@import "../../../assets/_var.scss";
+
+.btn-style {
+  display: inline-block;
+  border: 0;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  min-width: 14rem;
+  text-align: center;
+  // background: linear-gradient(270deg, #e9666b 0%, #ff5b62 100%);
+  color: $white;
+  padding: 1.05rem 2.8rem;
+  box-shadow: inset 0px 3px 6px #ffffff29;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 991px) {
+    font-size: 1.4rem;
+    min-width: 10rem;
+    padding: 0.8rem 2.2rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.8rem 1rem;
+  }
+
+  &:hover {
+    // opacity: 0.7;
+    opacity: 1;
+  }
+
+  &.white-btn {
+    background: $white;
+    color: $greenclr;
+    box-shadow: inset 0px 0px 6px #0000009e, 0px 0px 6px #ffffff57;
+
+  }
+
+  &.red-btn {
+    background: linear-gradient(270deg, #e9666b 0%, #ff5b62 100%);
+    border-color: $lightRed;
+    color: $white;
+    border: 1px solid transparent;
+  }
+}

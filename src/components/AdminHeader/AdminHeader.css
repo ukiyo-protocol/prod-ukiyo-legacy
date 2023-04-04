@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.adminHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 270px);
+  z-index: 2;
+  padding: 2rem;
+  background: #0d4842;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 991px) {
+  .adminHeader {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .adminHeader {
+    padding: 14px;
+  }
+}
+.adminHeader .adminHd_Wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .adminHeader .adminHd_Wrap {
+    justify-content: end;
+  }
+}
+.adminHeader .adminHd_Wrap .mobLogo {
+  display: none;
+}
+@media (max-width: 991px) {
+  .adminHeader .adminHd_Wrap .mobLogo {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+}
+.adminHeader .adminHd_Wrap button {
+  font-size: 16px;
+  padding: 10px 35px;
+  font-weight: 600;
+  color: #fff;
+  border: 0;
+  background: #438d87 !important;
+  border-radius: 30px;
+}
+@media (max-width: 767px) {
+  .adminHeader .adminHd_Wrap button {
+    padding: 8px 30px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .adminHeader .adminHd_Wrap button {
+    padding: 8px 10px;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.headlogo {
+  display: none;
+}
+@media (max-width: 991px) {
+  .headlogo {
+    position: relative;
+    max-width: 180px;
+    left: 60px;
+    display: block;
+    width: 40%;
+  }
+}/*# sourceMappingURL=AdminHeader.css.map */

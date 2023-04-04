@@ -1,0 +1,133 @@
+@import "../../assets/_var.scss";
+
+.sidebarStyle {
+  &.pro-sidebar {
+    color: #fff;
+    font-size: 1.8rem;
+    transition: all 0.25s linear;
+    height: calc(100vh - 78px);
+    position: fixed;
+    width: 350px;
+
+    @media (max-width: 1439px) {
+      width: 280px;
+    }
+
+    @media(max-width: 991px) {
+      height: calc(100vh - 64px);
+    }
+
+    @media(max-width: 479px) {
+      height: calc(100vh - 37px);
+    }
+
+    @media (max-width: 360px) {
+      width: 100%;
+    }
+
+    &.collapsed {
+      @media (max-width: 991px) {
+        width: 0;
+        min-width: 0;
+      }
+    }
+
+    .pro-sidebar-inner {
+      background: $textDark;
+    }
+
+    .pro-sidebar-header {
+      padding: 25px 65px;
+      border: 0 !important;
+
+      @media (max-width: 1439px) {
+        padding: 20px 40px;
+      }
+    }
+
+    .pro-menu {
+      .pro-menu-item {
+        font-size: 1.6rem;
+        font-weight: 400;
+        cursor: pointer;
+
+        .pro-inner-item {
+          padding: 0;
+          transition: all 0.3s linear;
+
+          >.pro-item-content {
+            overflow: unset;
+          }
+
+          a {
+            color: $white;
+            display: block;
+            padding: 18px 65px;
+            border-left: 4px solid transparent;
+            margin-bottom: 5px;
+
+            @media (max-width: 1439px) {
+              padding: 15px 40px;
+            }
+
+            svg {
+              margin-right: 15px;
+            }
+
+            &.active,
+            &:hover {
+              color: $extraLightRed;
+              border-left: 4px solid $extraLightRed;
+              box-shadow: 0px 0px 20px #0000002e;
+
+              svg {
+                path {
+                  fill: $extraLightRed;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// }
+.closemenu {
+  display: none;
+
+  @media (max-width: 991px) {
+    // position: fixed;
+    position: absolute;
+    display: inline-block;
+    // position: absolute;
+    top: 1.7rem;
+    right: 1.8rem;
+    // right: 20px;
+    z-index: 9998;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $extraLightRed;
+    border-radius: 50%;
+    color: $white;
+
+    @media (max-width: 767px) {
+      // top: 2rem;
+    }
+
+    @media (max-width: 567px) {
+      width: 4rem;
+      height: 4rem;
+      top: 2.4rem;
+    }
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+}

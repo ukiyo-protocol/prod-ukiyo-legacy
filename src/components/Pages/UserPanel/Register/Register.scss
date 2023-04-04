@@ -1,0 +1,24 @@
+@import "../../../../assets/_var.scss";
+
+.checkbox_col {
+  margin-bottom: 20px;
+}
+
+.Password_Input {
+  position: relative;
+
+  .form-control {
+    padding-right: 5rem;
+  }
+
+  img {
+    position: absolute;
+    right: 2rem;
+    top: 5.3rem;
+
+    @media(max-width: 767px) {
+      top: 4.5rem;
+
+    }
+  }
+}

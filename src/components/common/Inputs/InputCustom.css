@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.enter-amount-wrap {
+  height: 4rem;
+  display: flex;
+  background: #ffffff;
+}
+.enter-amount-wrap .customInput {
+  flex: 1 0;
+}
+.enter-amount-wrap .form-control {
+  color: #000000;
+  background: #ffffff;
+}
+.enter-amount-wrap .form-control:hover, .enter-amount-wrap .form-control:active, .enter-amount-wrap .form-control:focus {
+  color: #000000;
+  box-shadow: unset;
+}
+.enter-amount-wrap .form-control,
+.enter-amount-wrap .form-select {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border: 0;
+  color: #000000;
+  line-height: 1.8rem;
+  height: 100%;
+  caret-color: #000000;
+}
+.enter-amount-wrap .form-control::-moz-placeholder, .enter-amount-wrap .form-select::-moz-placeholder {
+  opacity: 0.6;
+}
+.enter-amount-wrap .form-control:-ms-input-placeholder, .enter-amount-wrap .form-select:-ms-input-placeholder {
+  opacity: 0.6;
+}
+.enter-amount-wrap .form-control::placeholder,
+.enter-amount-wrap .form-select::placeholder {
+  opacity: 0.6;
+}
+.enter-amount-wrap .form-select {
+  width: 16rem;
+  font-weight: 500;
+  background: #ffffff;
+  background-image: url(../../../assets/Images/down-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center right 1.5rem;
+  background-size: 1.5rem;
+}
+.enter-amount-wrap .form-select:focus {
+  box-shadow: unset;
+}
+.enter-amount-wrap .form-select option {
+  padding: 1rem;
+  color: #000000;
+}/*# sourceMappingURL=InputCustom.css.map */

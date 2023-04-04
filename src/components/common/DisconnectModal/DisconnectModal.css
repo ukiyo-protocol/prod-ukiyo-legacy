@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+.disconnect_modal .modal-content {
+  border-radius: 15px;
+  max-width: 500px;
+  background-color: radial-gradient(farthest-corner at 37px 82px, #355f70 0%, #0d2a35 42%);
+}
+.disconnect_modal .modal-header {
+  display: flex;
+  border: none;
+  justify-content: space-evenly;
+  padding: 10px 0 20px 110px;
+  border-radius: 12px 12px 0 0;
+}
+@media (max-width: 576px) {
+  .disconnect_modal .modal-header {
+    padding: 0 0 0 40px;
+  }
+}
+.disconnect_modal .modal-header .modal-title {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+.disconnect_modal .modal-header .btn-close {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
+}
+.disconnect_modal .modal-header .btn-close:focus {
+  box-shadow: unset;
+  outline: none;
+}
+.disconnect_modal .modal-body {
+  background-color: #15313d;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  font-size: 14px;
+}
+.disconnect_modal .modal-footer {
+  border: none;
+  border-radius: 0 0 12px 12px;
+  padding: 10px 0 10px 0;
+}/*# sourceMappingURL=DisconnectModal.css.map */

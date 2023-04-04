@@ -1,0 +1,146 @@
+@import "../../../assets/_var.scss";
+
+.inputStyle {
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
+
+  .form-label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+    @media (max-width: 767px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .form-control {
+    padding: 1.6rem 2.8rem;
+    border: 2px solid transparent;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $textDark;
+    border-radius: 30px;
+    transition: all 0.2s linear;
+
+    @media (max-width: 767px) {
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $lightRed;
+      box-shadow: unset;
+      outline: unset;
+    }
+
+    &::placeholder {
+      color: $textDark;
+
+      @media (max-width: 1366px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__wrap {
+    position: relative;
+
+    .form-control {
+
+      &:focus,
+      &:focus-visible {
+        box-shadow: unset;
+        border-color: unset;
+        outline: unset;
+        border: 1px solid transparent;
+        // color: transparent;
+      }
+    }
+
+    &.rec {
+      .form-control {
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+          box-shadow: unset;
+          border-color: unset;
+          outline: unset;
+          border: 2px solid transparent;
+          // color: transparent;
+        }
+      }
+    }
+  }
+
+  &__other {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 4px);
+    padding-right: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+      width: 30px;
+    }
+  }
+}
+
+.codeInput_style {
+  margin-bottom: 45px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+
+  .react-code-input {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    input {
+      width: 88px !important;
+      height: 60px !important;
+      border-radius: 30px !important;
+      box-shadow: unset !important;
+      border: 2px solid transparent !important;
+      color: #15313d !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      text-align: center;
+      padding-left: 0 !important;
+
+      @media (max-width: 767px) {
+        width: 65px !important;
+        height: 40px !important;
+      }
+
+      &:focus-visible {
+        border-color: $lightRed !important;
+        outline: 0 !important;
+      }
+    }
+  }
+}
+
+.error-text {
+  margin-top: 5px;
+  font-size: 12px;
+  color: $lightRed;
+  padding-left: 20px;
+}

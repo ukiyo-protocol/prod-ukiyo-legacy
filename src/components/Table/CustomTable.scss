@@ -1,0 +1,122 @@
+@import "../../assets/_var.scss";
+
+.custom_table {
+  &_inner {
+    // border-radius: 20px;
+    background-color: $white;
+    // border: 1px solid $borderclr;
+    margin-bottom: unset !important;
+    overflow: hidden;
+    white-space: nowrap;
+
+    thead {
+      tr {
+        background-color: $secondaryColor;
+
+        th {
+          color: $bluebg;
+          padding: 15px;
+          font-size: 14px;
+          font-weight: 400;
+
+          @media (max-width: 1199px) {
+            font-size: 12px;
+          }
+
+          &:first-child {
+            padding-left: 50px;
+
+            @media (max-width: 1199px) {
+              padding-left: 20px;
+            }
+          }
+
+          &:last-child {
+            text-align: center;
+            padding-left: 27px;
+
+            @media (max-width: 1199px) {
+              padding-right: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border: 1px solid #eff5f8;
+
+        &:first-child {
+          td {
+            padding-top: 24px;
+          }
+        }
+
+        &:last-child {
+
+          // border-bottom: none;
+          td {
+            padding-bottom: 24px;
+            // border-radius: 0 0 20px 0;
+          }
+        }
+
+        td {
+          vertical-align: middle;
+          font-size: 14px;
+          border: none;
+          padding: 20px;
+
+          span {
+            color: $greyclr;
+          }
+
+          @media (max-width: 1199px) {
+            font-size: 12px;
+          }
+
+          &:first-child {
+            padding-left: 50px;
+
+            @media (max-width: 1199px) {
+              padding-left: 20px;
+            }
+          }
+
+          &:last-child {
+            text-align: center;
+            padding-right: 27px;
+
+            @media (max-width: 1199px) {
+              padding-right: 20px;
+            }
+          }
+
+          button {
+            // border: 1px solid #3cc99a;
+            border-radius: 30px;
+            opacity: 1;
+            // color: #3cc99a;
+            color: $greyclr;
+            padding: 8px 15px;
+            font-size: 14px;
+            // background: #d3f9ec;
+            min-width: 150px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table_responsive {
+  padding: 0 6px;
+
+  @media (max-width: 991px) {
+    overflow-x: scroll;
+    height: 350px;
+    white-space: nowrap;
+  }
+}
