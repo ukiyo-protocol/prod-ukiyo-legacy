@@ -13,6 +13,7 @@ import {
   connectToWallet,
   connectWithWalletConnect,
 } from "./redux/actions/connect.action";
+import NewsBlog from "./components/Pages/NewsBlog/NewsBlog";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -45,6 +46,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/terms-and-conditions" element={<TermConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/news" element={<NewsBlog />} />
           <Route path="/verified" element={<SuccessVerification />} />
         </Routes>
       </BrowserRouter>

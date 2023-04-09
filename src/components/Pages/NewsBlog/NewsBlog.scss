@@ -1,0 +1,167 @@
+@import "../../../assets/_var.scss";
+
+.privacy_sec {
+  background-image: url(../../../assets/Images/mainBg.png);
+  padding-bottom: 65px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+
+  &_left {
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 70px;
+      font-weight: 600;
+      color: $white;
+      padding-left: 5px;
+      @media (max-width: 575px) {
+        font-size: 50px;
+      }
+      span {
+        color: $lightRed;
+      }
+    }
+
+    p {
+      color: $white;
+      font-size: 12px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.privacy_content {
+  &_left {
+    position: sticky;
+    top: 0;
+    margin-top: 70px;
+    @media (max-width: 575px) {
+      margin-top: 20px;
+    }
+
+    ul {
+      li {
+        font-size: 16px;
+        font-weight: 700;
+        color: $textGrey;
+        margin-top: 14px;
+        @media (max-width: 575px) {
+          margin-top: 10px;
+        }
+
+        &:first-child {
+          margin-top: unset;
+        }
+
+        a {
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.3) !important;
+        }
+
+        a.active {
+          color: $black !important;
+          //   text-decoration: underline;
+          font-weight: 700;
+        }
+
+        p {
+          color: $textGrey;
+          margin-top: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &_data {
+    &:first-child {
+      margin-top: unset;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+
+      li {
+        color: $textGrey;
+        font-weight: 400;
+
+        &::marker {
+          color: $extraLightRed;
+        }
+
+        &:last-child {
+          margin-bottom: 80px;
+        }
+
+        h4 {
+          color: $textDark;
+          font-weight: 600;
+          font-size: 16px;
+        }
+
+        .privacy_content_right {
+          margin-top: 64px;
+
+          .hl {
+            width: 43px;
+            height: 2px;
+            background-color: $lightRed;
+            margin-bottom: 12px;
+          }
+
+          h2 {
+            font-size: 30px;
+            color: $textDark;
+          }
+
+          h3 {
+            margin-top: 24px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 9px;
+            color: $textDark;
+          }
+
+          h4 {
+            font-size: 1.6rem;
+          }
+
+          .inner_list {
+            // list-style: disc;
+            li {
+              position: relative;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                background-color: #e9666b;
+                position: absolute;
+                top: 5.2px;
+                border-radius: 50%;
+                left: -20px;
+              }
+            }
+          }
+
+          p {
+            font-size: 16px;
+          }
+
+          .nodot {
+            list-style-type: none;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
