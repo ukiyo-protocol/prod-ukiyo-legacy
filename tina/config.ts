@@ -7,8 +7,8 @@ const token = process.env.REACT_APP_TINA_TOKEN!;
 
 export default defineConfig({
   branch,
-  clientId: clientId, // Get this from tina.io
-  token: token, // Get this from tina.io
+  clientId: "", // Get this from tina.io
+  token: "", // Get this from tina.io
 
   build: {
     outputFolder: "admin",
