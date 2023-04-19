@@ -37,7 +37,7 @@ import { AxiosResponse } from 'axios';
 import { CommonService } from '../../../../services/CommonService';
 
 const AdminDashboard = () => {
-    //Redux 
+    //Redux
     const userDetails: IReduxUserDetails = useSelector((state: any) => (state.user.walletAddress) ? state.user : false);
     const dispatch = useAppDispatch();
     const [kyc, setkyc] = useState([]);
@@ -160,26 +160,26 @@ const AdminDashboard = () => {
         });
     }
 
-    
+
     //Hook for filter on change
-    useEffect(() => {
-        if (userDetails && userDetails?.walletAddress) {
-            //Graph handler
-            fetchGraphDataViaFilter();
-        }
-        return () => { }
-    }, [filter, ukiyoTokenDetails]);
-    
+    // useEffect(() => {
+    //     if (userDetails && userDetails?.walletAddress) {
+    //         //Graph handler
+    //         // fetchGraphDataViaFilter();
+    //     }
+    //     return () => { }
+    // }, [filter, ukiyoTokenDetails]);
+
     //Graph data on filter change
-    const fetchGraphDataViaFilter = async () => {
-        const graphDetails = (await apiCallGet(`${API_HOST}${API.ADMIN.GRAPH}?graph_filter=${filter}`)) as AxiosResponse;
-        setTotalUsers(graphDetails.data.total_users);
-        if (ukiyoTokenDetails?.tokenDecimals && graphDetails && graphDetails.status === RESPONSES.SUCCESS) {
-            const formattedData = (CommonService.getGraphDataFormat(Number(filter), graphDetails.data.graph_data, ukiyoTokenDetails?.tokenDecimals!)) as unknown as Array<IChartResponse>;
-            setGraphData(formattedData);
-        }
-    }
-    
+    // const fetchGraphDataViaFilter = async () => {
+    //     const graphDetails = (await apiCallGet(`${API_HOST}${API.ADMIN.GRAPH}?graph_filter=${filter}`)) as AxiosResponse;
+    //     setTotalUsers(graphDetails.data.total_users);
+    //     if (ukiyoTokenDetails?.tokenDecimals && graphDetails && graphDetails.status === RESPONSES.SUCCESS) {
+    //         const formattedData = (CommonService.getGraphDataFormat(Number(filter), graphDetails.data.graph_data, ukiyoTokenDetails?.tokenDecimals!)) as unknown as Array<IChartResponse>;
+    //         setGraphData(formattedData);
+    //     }
+    // }
+
     const data = [
         {
             name: 'Page A',

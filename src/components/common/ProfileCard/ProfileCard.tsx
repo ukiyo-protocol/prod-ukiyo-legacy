@@ -16,27 +16,27 @@ const ProfileCard = ({ status }: any) => {
   const [email, setEmail] = useState('');
 
 
-  useEffect(() => {
-    getUserProfile();
-  }, [status]);
+  // useEffect(() => {
+  //   getUserProfile();
+  // }, [status]);
 
 
 
-  const capitalizeFirstLetter = (value: string) => {
-    return value.charAt(0).toUpperCase() + value.slice(1);
-  }
+  // const capitalizeFirstLetter = (value: string) => {
+  //   return value.charAt(0).toUpperCase() + value.slice(1);
+  // }
 
   //get login user profile details
-  const getUserProfile = async () => {
-    const result = await (apiCallGet(API_HOST + API.USER.PROFILE.VIEW, {}, false, false)) as AxiosResponse;
-    if (result && result.status == RESPONSES.SUCCESS) {
-      let first = capitalizeFirstLetter(result.data.first_name);
-      let last = capitalizeFirstLetter(result.data.last_name);
-      setFirstName(first);
-      setLastName(last);
-      setEmail(result.data.email)
-    }
-  }
+  // const getUserProfile = async () => {
+  //   const result = await (apiCallGet(API_HOST + API.USER.PROFILE.VIEW, {}, false, false)) as AxiosResponse;
+  //   if (result && result.status == RESPONSES.SUCCESS) {
+  //     let first = capitalizeFirstLetter(result.data.first_name);
+  //     let last = capitalizeFirstLetter(result.data.last_name);
+  //     setFirstName(first);
+  //     setLastName(last);
+  //     setEmail(result.data.email)
+  //   }
+  // }
   return (
     <div className="commn-bg profile-card text-center mb-3 d-flex flex-column justify-content-center">
       <h2 className="commn-title">

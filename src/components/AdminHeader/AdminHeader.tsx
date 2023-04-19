@@ -63,21 +63,21 @@ const AdminHeader = ({ headTitle }: props) => {
   }, [userDetails?.walletAddress]);
 
 
-  useLayoutEffect(() => {
-    if (!userDetails.isAdmin) {
-      getUserProfile();
-    }
+  // useLayoutEffect(() => {
+  //   if (!userDetails.isAdmin) {
+  //     getUserProfile();
+  //   }
 
 
-  }, []);
+  // }, []);
 
   //get login user profile details
-  const getUserProfile = async () => {
-    const result = await (apiCallGet(API_HOST + API.USER.PROFILE.VIEW, {}, false, false)) as AxiosResponse;
-    if (result && result.status == RESPONSES.SUCCESS) {
-      setIsKycVerified(result.data.is_kyc_verified);
-    }
-  }
+  // const getUserProfile = async () => {
+  //   const result = await (apiCallGet(API_HOST + API.USER.PROFILE.VIEW, {}, false, false)) as AxiosResponse;
+  //   if (result && result.status == RESPONSES.SUCCESS) {
+  //     setIsKycVerified(result.data.is_kyc_verified);
+  //   }
+  // }
   //handler to connect --> Unused function
   // const handlerToConnect = () => {
   //   if (Number(isKycVerified) == KYC_STATUS.APPROVED) {

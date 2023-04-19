@@ -95,14 +95,14 @@ const Dashboard = () => {
 
 
   useLayoutEffect(() => {
-    getUserProfile();
+    // getUserProfile();
     getTokenDetailsHandler();
   }, []);
 
   useEffect(() => {
     if (!userDetails?.isAdmin) {
       onInit();
-      totalTokenSoldHandler();
+      // totalTokenSoldHandler();
       getTokenDetailsHandler();
       viewTokenPriceHandler();
       if (userDetails && userDetails.walletAddress) {
@@ -156,17 +156,17 @@ const Dashboard = () => {
   }, [amount]);
 
   //get total token sold
-  const totalTokenSoldHandler = async () => {
-    let result: any = (await apiCallGet(
-      API_HOST + API.USER.STATS,
-      {},
-      false,
-      false
-    )) as AxiosResponse;
-    if (result && result.status === RESPONSES.SUCCESS) {
-      setTotalTokenSold(result?.data[0]);
-    }
-  };
+  // const totalTokenSoldHandler = async () => {
+  //   let result: any = (await apiCallGet(
+  //     API_HOST + API.USER.STATS,
+  //     {},
+  //     false,
+  //     false
+  //   )) as AxiosResponse;
+  //   if (result && result.status === RESPONSES.SUCCESS) {
+  //     setTotalTokenSold(result?.data[0]);
+  //   }
+  // };
 
   //get login user profile details
   // const getUserProfile = async () => {
@@ -206,14 +206,14 @@ const Dashboard = () => {
       )
     );
 
-    if (usdtTokenDetails && usdtTokenDetails != undefined) {
+    if (usdtTokenDetails && usdtTokenDetails !== undefined) {
       setUsdtTokenDetails(usdtTokenDetails);
     }
 
     let ukiyoTokenDetails = await dispatch(
       actionToGetUkiyoTokenDetails(userDetails.wallet)
     );
-    if (ukiyoTokenDetails && ukiyoTokenDetails != undefined) {
+    if (ukiyoTokenDetails && ukiyoTokenDetails !== undefined) {
       setUkiyoTokenDetails(ukiyoTokenDetails);
     }
   };
@@ -264,7 +264,7 @@ const Dashboard = () => {
         return ` 0 ${CURRENCY_TYPE.ETH}`;
       }
     } else {
-      if (usdtToken && usdtToken != undefined && usdtToken.tokenBalance > 0) {
+      if (usdtToken && usdtToken !== undefined && usdtToken.tokenBalance > 0) {
         return `${(usdtToken.tokenBalance / usdtToken.tokenDecimals).toFixed(
           5
         )}  ${CURRENCY_TYPE.USDT}`;
@@ -276,7 +276,7 @@ const Dashboard = () => {
   // function to get token price in usd
   const viewTokenPriceHandler = async () => {
     let price = await dispatch(actionToGetTokenPrice(userDetails.wallet));
-    if (price && price != undefined) {
+    if (price && price !== undefined) {
       setViewTokenPrice(price / USD_DECIMALS_FOR_PRICE);
     }
   };
@@ -333,7 +333,7 @@ const Dashboard = () => {
     // }
 
     if (amount! < 0 || amount === null) {
-      return Toast.error("Please enter a valid a amout to buy");
+      return Toast.error("Please enter a valid a amount to buy");
     }
 
     if (currencyType === undefined) {
@@ -433,7 +433,7 @@ const Dashboard = () => {
 
   //handler to show total token sold
   const viewTotalTokenSold = () => {
-    if (totalTokenSold != undefined && ukiyoTokenDetails != undefined) {
+    if (totalTokenSold !== undefined && ukiyoTokenDetails != undefined) {
       if (
         Number(totalTokenSold?.total_purchased_tokens) &&
         Number(totalTokenSold?.total_purchased_tokens) > 0 &&
@@ -499,8 +499,8 @@ const Dashboard = () => {
                   <input
                     className="form-control"
                     type="number"
-                    // value={amount! || ''}
-                    value={amount!}
+                    value={amount! || ''}
+                    // value={amount!}
                     placeholder="Enter amount"
                     onChange={(e: any) => onChangeHandler(e)}
                   />

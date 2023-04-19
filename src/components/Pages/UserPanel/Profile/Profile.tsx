@@ -53,27 +53,27 @@ const Profile = () => {
   const [eyeIcon, setEyeIcon] = useState('hide');
   const [eyeIconCnfrmPwd, setEyeIconCnfrmPwd] = useState('hide');
 
-  useEffect(() => {
-    if (!userDetails.isAdmin) {
-      getUserProfile()
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!userDetails.isAdmin) {
+  //     getUserProfile()
+  //   }
+  // }, []);
 
-  const getUserProfile = async () => {
-    const result = await (apiCallGet(API_HOST + API.USER.PROFILE.VIEW, {}, false, false)) as AxiosResponse;
-    if (result && result.status == RESPONSES.SUCCESS) {
-      setFirstName(result.data.first_name);
-      setLastName(result.data.last_name);
-      setEmail(result.data.email);
-    }
+  // const getUserProfile = async () => {
+  //   const result = await (apiCallGet(API_HOST + API.USER.PROFILE.VIEW, {}, false, false)) as AxiosResponse;
+  //   if (result && result.status == RESPONSES.SUCCESS) {
+  //     setFirstName(result.data.first_name);
+  //     setLastName(result.data.last_name);
+  //     setEmail(result.data.email);
+  //   }
 
-    setIsProfileUpdated(false);
+  //   setIsProfileUpdated(false);
 
-  }
+  // }
 
   const updateUserProfile = async (e: any) => {
     e.preventDefault();
-    
+
     let fName = Validation.firstName(firstName);
     let lName = Validation.lastName(lastName);
     if (!fName) {
@@ -98,7 +98,7 @@ const Profile = () => {
 
 
 
-    getUserProfile();
+    // getUserProfile();
     setIsProfileUpdated(true)
   }
 
