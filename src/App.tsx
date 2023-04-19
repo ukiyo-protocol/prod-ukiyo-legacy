@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Web3 from "web3";
 import Home from "./components/Pages/LandingPage/Home";
+import Dashboard from "./components/Pages/UserPanel/Dashboard/Dashboard";
 import PrivacyPolicy from "./components/Pages/PrivacyPolicy/PrivacyPolicy";
 import SuccessVerification from "./components/Pages/SuccessVerification/SuccessVerification";
 import TermConditions from "./components/Pages/TermConditions/TermConditions";
@@ -41,12 +42,13 @@ const App: React.FC = () => {
   return (
     <>
       <BrowserRouter>
-        <PrivateRoute />
+        {/* <PrivateRoute /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/terms-and-conditions" element={<TermConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/news" element={<NewsBlog />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/verified" element={<SuccessVerification />} />
         </Routes>
       </BrowserRouter>
