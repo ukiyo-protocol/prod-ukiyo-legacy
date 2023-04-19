@@ -163,7 +163,7 @@ const Dashboard = () => {
       false,
       false
     )) as AxiosResponse;
-    if (result && result.status == RESPONSES.SUCCESS) {
+    if (result && result.status === RESPONSES.SUCCESS) {
       setTotalTokenSold(result?.data[0]);
     }
   };
@@ -176,7 +176,7 @@ const Dashboard = () => {
       false,
       false
     )) as AxiosResponse;
-    if (result && result.status == RESPONSES.SUCCESS) {
+    if (result && result.status === RESPONSES.SUCCESS) {
       setFirstName(result.data.first_name);
       setLastName(result.data.last_name);
       setEmail(result.data.email);
@@ -224,7 +224,7 @@ const Dashboard = () => {
     if (amount !== null && Number(amount)) {
       let _amount;
 
-      if (Number(currencyType) == ALLOWED_CURRENCY_TYPES.ETH) {
+      if (Number(currencyType) === ALLOWED_CURRENCY_TYPES.ETH) {
         _amount = CommonService.convertWithDecimal(amount, ETH_DECIMALS);
       } else {
         _amount = CommonService.convertWithDecimal(
@@ -256,7 +256,7 @@ const Dashboard = () => {
 
   //function to show balance based on currency type like(eth and usdt)
   const viewBalance = () => {
-    if (Number(currencyType) == ALLOWED_CURRENCY_TYPES.ETH) {
+    if (Number(currencyType) === ALLOWED_CURRENCY_TYPES.ETH) {
       if (Number(ethBalance) > 0) {
         return `${(Number(ethBalance!) / ETH_DECIMALS).toFixed(5)} ${CURRENCY_TYPE.ETH
           }`;
@@ -289,7 +289,7 @@ const Dashboard = () => {
     if (Number(value) && Number(value) > 0) {
       const isCurrencyETH = (Number(currencyType) === ALLOWED_CURRENCY_TYPES.ETH) ? true : false;
       let validate = Validation.shouldBeNumberValidation(value, isCurrencyETH);
-      if (validate == true) {
+      if (validate === true) {
         setAmount(value);
       }
     } else {
@@ -312,7 +312,7 @@ const Dashboard = () => {
       API_HOST + API.USER.VOUCHER.CREATE,
       payload
     )) as IAxiosResponse;
-    if (result && result.status == RESPONSES.SUCCESS) {
+    if (result && result.status === RESPONSES.SUCCESS) {
       let decrypt = await CRPTO_TS.decryptHandler(result.data);
       return decrypt;
     } else {
@@ -332,11 +332,11 @@ const Dashboard = () => {
       return handleShow();
     }
 
-    if (amount! < 0 || amount == null) {
+    if (amount! < 0 || amount === null) {
       return Toast.error("Please enter a valid a amout to buy");
     }
 
-    if (currencyType == undefined) {
+    if (currencyType === undefined) {
       return Toast.error("Please choose a currency");
     }
 
@@ -345,7 +345,7 @@ const Dashboard = () => {
     }
 
     let _amount;
-    if (Number(currencyType) == ALLOWED_CURRENCY_TYPES.ETH) {
+    if (Number(currencyType) === ALLOWED_CURRENCY_TYPES.ETH) {
       _amount = CommonService.convertWithDecimal(amount, ETH_DECIMALS);
     } else {
       _amount = CommonService.convertWithDecimal(
@@ -356,7 +356,7 @@ const Dashboard = () => {
     // create voucher
     // const voucher = await createVoucher(_amount);
 
-    if (Number(currencyType) == ALLOWED_CURRENCY_TYPES.USDT) {
+    if (Number(currencyType) === ALLOWED_CURRENCY_TYPES.USDT) {
       let allowance;
       allowance = await dispatch(
         actionToGetAllowance(
@@ -555,7 +555,7 @@ const Dashboard = () => {
                   />
                   <div className="inputStyle__other">
                     <p className="d-flex align-items-center gap-3">
-                      {ukiyoTokenDetails && ukiyoTokenDetails != undefined
+                      {ukiyoTokenDetails && ukiyoTokenDetails !== undefined
                         ? ukiyoTokenDetails.tokenSymbol
                         : null}
                       <img src={kxo} alt="kxo-img" />
