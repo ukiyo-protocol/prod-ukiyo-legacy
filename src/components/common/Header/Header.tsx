@@ -288,7 +288,7 @@ const Header = ({ isHide }: any) => {
                         }}
                       /> */}
                       <ButtonCustom title={"Pre Sale"} className="btnBorder" onClick={() => navigate('/login')} />
-                      <ButtonCustom title={"Login"} className="btnGradient" onClick={() => navigate('/login')} />
+                      <ButtonCustom title={"Login"} className="btnGradient" onClick={() => navigate('/dashboard')} />
                     </div>
                   )}
 

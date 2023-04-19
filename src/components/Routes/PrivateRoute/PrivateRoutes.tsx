@@ -26,21 +26,21 @@ const PrivateRoute = () => {
 
         {/* route for user panel */}
 
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/admin-login" element={<AdminLogin />} /> */}
         <Route path="/register" element={<Register />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/verify-otp" element={<VerificationCode />} />
         <Route path="/change-password" element={<ChangePassword />} />
-        {/* 
+        {/*
         <Route path="/dashboard" element={<UserAuthGuard component={Dashboard} />} />
         <Route path="/profile" element={<UserAuthGuard component={Profile} />} />
         <Route path="/kyc-record" element={<UserAuthGuard component={KycRecord} />} />
         <Route path="/transaction-history" element={<UserAuthGuard component={TransactionHistory} />} /> */}
 
 
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/kyc-record" element={<KycRecord />} />
         <Route path="/transaction-history" element={<TransactionHistory />} />
 
@@ -48,7 +48,7 @@ const PrivateRoute = () => {
           <Route path="login" element={<AdminLogin />} />
           <Route path="kyc" element={<Kyc />} />
           <Route path="reset-password" element={<ResetPassword />} />
-          <Route path="dashboard" element={<AdminDashboard />} />
+          {/* <Route path="dashboard" element={<AdminDashboard />} /> */}
           <Route path="settings" element={<AdminSetting />} />
           <Route path="transaction-history" element={<AdminTransactionHistory />} />
         </Route>
