@@ -78,16 +78,16 @@ const AdminHeader = ({ headTitle }: props) => {
       setIsKycVerified(result.data.is_kyc_verified);
     }
   }
-  //handler to connect
-  const handlerToConnect = () => {
-    if (Number(isKycVerified) == KYC_STATUS.APPROVED) {
-      // handleToShowKycPopup()
-      Toast.error("Please complete you KYC");
-    } else {
-      handleShow();
+  //handler to connect --> Unused function
+  // const handlerToConnect = () => {
+  //   if (Number(isKycVerified) == KYC_STATUS.APPROVED) {
+  //     // handleToShowKycPopup()
+  //     Toast.error("Please complete you KYC");
+  //   } else {
+  //     handleShow();
 
-    }
-  }
+  //   }
+  // }
 
   //Function to disconnect wallet
   const disconnectHandler = async () => {
