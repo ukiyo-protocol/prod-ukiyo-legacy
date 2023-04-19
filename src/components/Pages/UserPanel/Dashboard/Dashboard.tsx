@@ -169,20 +169,20 @@ const Dashboard = () => {
   };
 
   //get login user profile details
-  const getUserProfile = async () => {
-    const result = (await apiCallGet(
-      API_HOST + API.USER.PROFILE.VIEW,
-      {},
-      false,
-      false
-    )) as AxiosResponse;
-    if (result && result.status === RESPONSES.SUCCESS) {
-      setFirstName(result.data.first_name);
-      setLastName(result.data.last_name);
-      setEmail(result.data.email);
-      setIsKycVerified(result.data.is_kyc_verified);
-    }
-  };
+  // const getUserProfile = async () => {
+  //   const result = (await apiCallGet(
+  //     API_HOST + API.USER.PROFILE.VIEW,
+  //     {},
+  //     false,
+  //     false
+  //   )) as AxiosResponse;
+  //   if (result && result.status === RESPONSES.SUCCESS) {
+  //     setFirstName(result.data.first_name);
+  //     setLastName(result.data.last_name);
+  //     setEmail(result.data.email);
+  //     setIsKycVerified(result.data.is_kyc_verified);
+  //   }
+  // };
 
   // function to get user balance according to currency type and usdt token details
   const getUserBalance = async () => {
@@ -323,14 +323,14 @@ const Dashboard = () => {
 
   const handlerToBuyTokens = async (e: any) => {
     e.preventDefault();
-    await getUserProfile();
+    // await getUserProfile();
 
     if (!userDetails.walletAddress) {
       return Toast.error("Please connect with wallet");
     }
-    if (isKycVerified !== KYC_STATUS.APPROVED) {
-      return handleShow();
-    }
+    // if (isKycVerified !== KYC_STATUS.APPROVED) {
+    //   return handleShow();
+    // }
 
     if (amount! < 0 || amount === null) {
       return Toast.error("Please enter a valid a amout to buy");
