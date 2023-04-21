@@ -15,6 +15,27 @@ import {
   connectWithWalletConnect,
 } from "./redux/actions/connect.action";
 import NewsBlog from "./components/Pages/NewsBlog/NewsBlog";
+import "@rainbow-me/rainbowkit/styles.css";
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { Chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
+
+const { chains, provider } = configureChains(
+  [Chain.mainnet, Chain.goerli],
+  [alchemyProvider({ apiKey: process.env.REACT_APP_ALCHEMY_ID }), publicProvider()]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: "Ukiyo Protocol",
+  chains
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider
+});
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -40,19 +61,21 @@ const App: React.FC = () => {
   };
 
   return (
-    <>
-      <BrowserRouter>
-        {/* <PrivateRoute /> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/terms-and-conditions" element={<TermConditions />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/news" element={<NewsBlog />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/verified" element={<SuccessVerification />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains}>
+        <BrowserRouter>
+          {/* <PrivateRoute /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/terms-and-conditions" element={<TermConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/news" element={<NewsBlog />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/verified" element={<SuccessVerification />} />
+          </Routes>
+        </BrowserRouter>
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 };
 
