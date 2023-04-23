@@ -19,16 +19,16 @@ import * as types from "../../../redux/actionTypes";
 const ConnectWallet = ({ show, handleClose, isAdmin }: any) => {
   const dispatch = useAppDispatch();
   const userDetails: IReduxUserDetails = useSelector((state: any) => (state.user.walletAddress) ? state.user : false);
-  
+
   useLayoutEffect(() => {
- 
+
     if (isAdmin == false && typeof (isAdmin) !== 'undefined' && userDetails.walletAddress) {
       verifyWalletAddress();
     }
-   
+
   }, [userDetails.walletAddress])
-  
-  
+
+
 //verify wallet addres with respective registered email
   const verifyWalletAddress = async () => {
     let response = await apiCallGet(API_HOST + API.USER.VERIFY_ACCOUNT + userDetails.walletAddress) as IAxiosResponse;
@@ -37,15 +37,22 @@ const ConnectWallet = ({ show, handleClose, isAdmin }: any) => {
       return Toast.error(response.message);
     }
   }
-  
-  
-  //Handler function to connect to metamask wallet
+
+
+
+  // Handler function to connect to the Metamask wallet
   const connectWithMetaMaskHandler = async (e: any) => {
     e.preventDefault();
-    let result = await dispatch(connectToWallet(WALLETS.METAMASK));
-    await dispatch(actionToGetUkiyoTokenDetails(userDetails?.wallet))
-    await dispatch(actionToGetUsdtTokenDetails(userDetails?.wallet, userDetails?.walletAddress))
+    try {
+      await dispatch(connectToWallet(WALLETS.METAMASK));
+      await dispatch(actionToGetUkiyoTokenDetails(userDetails?.wallet));
+      await dispatch(actionToGetUsdtTokenDetails(userDetails?.wallet, userDetails?.walletAddress));
+    } catch (error) {
+      console.error("Error connecting to Metamask:", error);
+      Toast.error("Error connecting to Metamask.");
+    }
   };
+
 
   //Handler function to connect using wallet connect
   const walletConnectHandler = async (e: React.MouseEvent) => {
@@ -83,7 +90,7 @@ const ConnectWallet = ({ show, handleClose, isAdmin }: any) => {
         <Row>
           <Col className="connect_options">
             <ul>
-              
+
               {isMobile ? null :
                 <li>
                   <Button onClick={(e) => connectWithMetaMaskHandler(e)}>
@@ -93,7 +100,7 @@ const ConnectWallet = ({ show, handleClose, isAdmin }: any) => {
                     MetaMask{" "}
                   </Button>
                 </li>}
-            
+
               <li>
                 <Button onClick={e => walletConnectHandler(e)}>
                   WalletConnect{" "}
