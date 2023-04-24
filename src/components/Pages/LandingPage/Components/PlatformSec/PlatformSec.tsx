@@ -35,7 +35,7 @@ const PlatformSec = () => {
           <Col sm={12} md={12} lg={6} className="order-lg-1 mb-5 mb-lg-0">
             <div className="platform__right  text-center">
               {/* <img src={protocol_img} alt="protocol" /> */}
-              <Lottie animationData={jsonDataHero} />;
+              <Lottie animationData={jsonDataHero} />
             </div>
 
           </Col>
