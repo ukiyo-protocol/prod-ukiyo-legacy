@@ -26,19 +26,23 @@ const PrivateRoute = () => {
 
         {/* route for user panel */}
 
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/admin-login" element={<AdminLogin />} /> */}
-        <Route path="/register" element={<Register />} />
+        {/* Uncomment below for launch */}
+        {/* <Route path="/register" element={<Register />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/verify-otp" element={<VerificationCode />} />
-        <Route path="/change-password" element={<ChangePassword />} />
-        {/* 
+        <Route path="/change-password" element={<ChangePassword />} /> */}
+
+        {/* Uncomment above for launch */}
+        {/*
         <Route path="/dashboard" element={<UserAuthGuard component={Dashboard} />} />
         <Route path="/profile" element={<UserAuthGuard component={Profile} />} />
         <Route path="/kyc-record" element={<UserAuthGuard component={KycRecord} />} />
         <Route path="/transaction-history" element={<UserAuthGuard component={TransactionHistory} />} /> */}
 
-
+{/* Un comment for launch */}
+{/*
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/kyc-record" element={<KycRecord />} />
@@ -51,8 +55,8 @@ const PrivateRoute = () => {
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="settings" element={<AdminSetting />} />
           <Route path="transaction-history" element={<AdminTransactionHistory />} />
-        </Route>
-
+        </Route> */}
+{/* Uncomment above for launch */}
         {/* route for admin internal pages */}
       </Routes>
     </>
