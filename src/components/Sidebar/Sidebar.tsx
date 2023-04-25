@@ -138,12 +138,12 @@ const Sidebar = () => {
                   Profile
                 </NavLink>
               </MenuItem>
-              <MenuItem>
+              {/* <MenuItem>
                 <NavLink to="/kyc-record">
                   <DocIcon />
                   KYC
                 </NavLink>
-              </MenuItem>
+              </MenuItem> */}
               <MenuItem>
                 <NavLink to="/transaction-history">
                   <TransactionIcon />
