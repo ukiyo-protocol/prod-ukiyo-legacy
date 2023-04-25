@@ -56,38 +56,9 @@ const AdminHeader = ({ headTitle }: props) => {
 
 
   useEffect(() => {
-    // if (!userDetails.isAdmin) {
-    //   setIsAdminLogin(false)
-    // }
     setShow(false);
   }, [userDetails?.walletAddress]);
 
-
-  // useLayoutEffect(() => {
-  //   if (!userDetails.isAdmin) {
-  //     getUserProfile();
-  //   }
-
-
-  // }, []);
-
-  //get login user profile details
-  // const getUserProfile = async () => {
-  //   const result = await (apiCallGet(API_HOST + API.USER.PROFILE.VIEW, {}, false, false)) as AxiosResponse;
-  //   if (result && result.status == RESPONSES.SUCCESS) {
-  //     setIsKycVerified(result.data.is_kyc_verified);
-  //   }
-  // }
-  //handler to connect --> Unused function
-  // const handlerToConnect = () => {
-  //   if (Number(isKycVerified) == KYC_STATUS.APPROVED) {
-  //     // handleToShowKycPopup()
-  //     Toast.error("Please complete you KYC");
-  //   } else {
-  //     handleShow();
-
-  //   }
-  // }
 
   //Function to disconnect wallet
   const disconnectHandler = async () => {
@@ -98,7 +69,7 @@ const AdminHeader = ({ headTitle }: props) => {
   };
 
 
-  // console.log('userDetails::::>>>', userDetails)
+
   return (
     <>
       <div className="adminHeader" id="myadminHeader">
