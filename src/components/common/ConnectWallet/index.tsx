@@ -7,7 +7,7 @@ import { API, API_HOST, WALLETS } from "../../../config/constants";
 import { RES_MESSAGES } from "../../../constants/messages";
 import { useAppDispatch } from "../../../hooks/hooks";
 import { IReduxUserDetails } from "../../../interfaces/store";
-import { connectToWallet, connectWithWalletConnect, disconnectWallet } from "../../../redux/actions/connect.action";
+import { connectToWallet, connectWithWalletConnect, disconnectWallet, connectToWalletConnectWithWeb3, connectToMetamaskWithWeb3 } from "../../../redux/actions/connect.action";
 import Toast from "../Toast";
 import "./ConnectWallet.scss";
 import { actionToGetUkiyoTokenDetails, actionToGetUsdtTokenDetails } from '../../../redux/actions/user.action';
@@ -20,33 +20,34 @@ const ConnectWallet = ({ show, handleClose, isAdmin }: any) => {
   const dispatch = useAppDispatch();
   const userDetails: IReduxUserDetails = useSelector((state: any) => (state.user.walletAddress) ? state.user : false);
 
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
 
-    if (isAdmin == false && typeof (isAdmin) !== 'undefined' && userDetails.walletAddress) {
-      verifyWalletAddress();
-    }
+  //   if (isAdmin === false && typeof (isAdmin) !== 'undefined' && userDetails.walletAddress) {
+  //     verifyWalletAddress();
+  //   }
 
-  }, [userDetails.walletAddress])
+  // }, [userDetails.walletAddress])
 
 
 //verify wallet addres with respective registered email
-  const verifyWalletAddress = async () => {
-    let response = await apiCallGet(API_HOST + API.USER.VERIFY_ACCOUNT + userDetails.walletAddress) as IAxiosResponse;
-    if (response && response.error == true) {
-      dispatch(disconnectWallet(userDetails.wallet));
-      return Toast.error(response.message);
-    }
-  }
+  // const verifyWalletAddress = async () => {
+  //   let response = await apiCallGet(API_HOST + API.USER.VERIFY_ACCOUNT + userDetails.walletAddress) as IAxiosResponse;
+  //   if (response && response.error == true) {
+  //     dispatch(disconnectWallet(userDetails.wallet));
+  //     return Toast.error(response.message);
+  //   }
+  // }
 
 
 
   // Handler function to connect to the Metamask wallet
-  const connectWithMetaMaskHandler = async (e: any) => {
+  const connectWithMetaMaskHandler = async (e: React.MouseEvent) => {
     e.preventDefault();
+
     try {
       await dispatch(connectToWallet(WALLETS.METAMASK));
-      await dispatch(actionToGetUkiyoTokenDetails(userDetails?.wallet));
-      await dispatch(actionToGetUsdtTokenDetails(userDetails?.wallet, userDetails?.walletAddress));
+      // await dispatch(actionToGetUkiyoTokenDetails(userDetails?.wallet));
+      // await dispatch(actionToGetUsdtTokenDetails(userDetails?.wallet, userDetails?.walletAddress));
     } catch (error) {
       console.error("Error connecting to Metamask:", error);
       Toast.error("Error connecting to Metamask.");
