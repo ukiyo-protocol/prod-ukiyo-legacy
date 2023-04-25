@@ -26,7 +26,7 @@ import { RESPONSES } from "../../../../constants/response";
 import { Validation } from "../../../../helpers/validation.helper";
 import { useAppDispatch } from "../../../../hooks/hooks";
 import { IAxiosResponse } from "../../../../interfaces/axios";
-import { CRPTO_TS } from "../../../../lib/crypto";
+// import { CRPTO_TS } from "../../../../lib/crypto";
 import {
   actionToBuyTokens,
   actionToCalculate,
@@ -302,23 +302,23 @@ const Dashboard = () => {
 
   //createVoucher
 
-  const createVoucher = async (_amount: any) => {
-    let payload = {
-      type: currencyType,
-      amount: _amount,
-      to_address: userDetails.walletAddress
-    };
-    let result = (await apiCallPost(
-      API_HOST + API.USER.VOUCHER.CREATE,
-      payload
-    )) as IAxiosResponse;
-    if (result && result.status == RESPONSES.SUCCESS) {
-      let decrypt = await CRPTO_TS.decryptHandler(result.data);
-      return decrypt;
-    } else {
-      Toast.error(result.message);
-    }
-  };
+  // const createVoucher = async (_amount: any) => {
+  //   let payload = {
+  //     type: currencyType,
+  //     amount: _amount,
+  //     to_address: userDetails.walletAddress
+  //   };
+  //   let result = (await apiCallPost(
+  //     API_HOST + API.USER.VOUCHER.CREATE,
+  //     payload
+  //   )) as IAxiosResponse;
+  //   if (result && result.status == RESPONSES.SUCCESS) {
+  //     let decrypt = await CRPTO_TS.decryptHandler(result.data);
+  //     return decrypt;
+  //   } else {
+  //     Toast.error(result.message);
+  //   }
+  // };
   //handler to but tokens via usdt or eth currency
 
   const handlerToBuyTokens = async (e: any) => {
