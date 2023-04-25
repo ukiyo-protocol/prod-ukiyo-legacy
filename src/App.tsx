@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Web3 from "web3";
 import Home from "./components/Pages/LandingPage/Home";
 import PrivacyPolicy from "./components/Pages/PrivacyPolicy/PrivacyPolicy";
@@ -41,17 +41,19 @@ const App: React.FC = () => {
   return (
     <>
       <BrowserRouter>
-        <PrivateRoute />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/terms-and-conditions" element={<TermConditions />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/news" element={<NewsBlog />} />
-          <Route path="/verified" element={<SuccessVerification />} />
-        </Routes>
+        {/* <PrivateRoute /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/terms-and-conditions" element={<TermConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            {/* <Route path="/news" element={<NewsBlog />} /> */}
+            {/* <Route path="/verified" element={<SuccessVerification />} /> */}
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
       </BrowserRouter>
     </>
   );
+
 };
 
 export default App;
