@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import {
   DAPP_DEEPLINK,
   NETWORK_DETAILS,
@@ -11,6 +12,8 @@ import { Dispatch } from "react";
 import { AnyAction } from "redux";
 import Toast from "../../components/common/Toast";
 import { isMobile } from "react-device-detect";
+import WalletConnect from '@walletconnect/client';
+
 
 // import { notify } from "../../components/Toast";
 
@@ -19,6 +22,47 @@ import { isMobile } from "react-device-detect";
  * @param type
  * @returns
  */
+
+// Test functions
+
+interface CustomWindow extends Window {
+  ethereum?: any;
+}
+
+export const connectToMetamaskWithWeb3 = async () => {
+  try {
+    const windowObj = window as CustomWindow;
+    if (!windowObj.ethereum) {
+      throw new Error("Please install MetaMask to connect to a wallet.");
+    }
+    await windowObj.ethereum.request({ method: 'eth_requestAccounts' });
+    const web3 = new Web3(windowObj.ethereum);
+    return web3;
+  } catch (error) {
+    console.error("Error connecting to MetaMask:", error);
+    throw new Error("Error connecting to MetaMask.");
+  }
+};
+
+export const connectToWalletConnectWithWeb3 = async () => {
+  try {
+    const windowObj = window as CustomWindow;
+    const bridge = "https://bridge.walletconnect.org";
+    const qrcodeModalOptions = {
+      mobileLinks: ["metamask", "trust", "rainbow"],
+    };
+    const connector = new WalletConnect({ bridge, qrcodeModalOptions });
+    await connector.createSession();
+    const web3 = new Web3(provider);
+    return { web3, connector };
+  } catch (error) {
+    console.error("Error connecting to WalletConnect:", error);
+    throw new Error("Error connecting to WalletConnect.");
+  }
+};
+
+
+// ENd test functions
 export const isMetamaskInstalled = async (type: string) => {
   try {
     // console.log("type", type);
@@ -54,67 +98,62 @@ export const isMetamaskInstalled = async (type: string) => {
  */
 export const connectToWallet =
   (type: string) =>
-  async (
-    dispatch: AppDispatch,
-    getState: () => RootState
-  ): Promise<string|boolean> => {
+  async (dispatch: AppDispatch, getState: () => RootState): Promise<string|boolean> => {
     try {
-      
-        let account: string;
-        const { ethereum } = window as any;
-        const isInstalled = await isMetamaskInstalled(type);
-        if (isInstalled) {
-          // if (isInstalled && isInstalled === WALLET.METAMASK) {
-          const accounts = await ethereum.request({
-            method: "eth_requestAccounts",
-          });
-          account = accounts[0];
+      const { ethereum } = window as any;
+      if (ethereum && ethereum.isMetaMask) {
+        const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+        const account = accounts[0];
+        dispatch({ type: types.WALLET_ADDRESS, payload: account });
+        dispatch({ type: types.WALLET, payload: type });
 
-          let webInstance = await new Web3(ethereum);
-          let chainId = await webInstance.eth.getChainId();
-          dispatch({ type: types.WALLET_ADDRESS, payload: account });
-          dispatch({ type: types.WALLET, payload: type });
-          if (chainId !== Number(NETWORK_DETAILS.CHAIN_ID)) {
-            const response = await switchNetwork();
-            if (response) {
-              alert("Required Network added successfully.Please connect now.");
-            }
+        const webInstance = new Web3(ethereum);
+        const chainId = await webInstance.eth.getChainId();
+        if (chainId !== Number(NETWORK_DETAILS.CHAIN_ID)) {
+          const response = await switchNetwork();
+          if (response) {
+            alert("Required Network added successfully.Please connect now.");
           }
-          dispatch({ type: types.WALLET_ADDRESS, payload: account });
-          dispatch({ type: types.WALLET, payload: type });
-          
-          ethereum.on("accountsChanged", (response: any) => {
+        }
+
+        useEffect(() => {
+          const handleAccountsChanged = (response: any) => {
             let isAdminLogin = getState().user.isAdmin;
-            //  alert(isAdminLogin)
             if (isAdminLogin) {
               dispatch({ type: types.WALLET_ADDRESS, payload: "" });
               dispatch({ type: types.WALLET, payload: "" });
               dispatch({ type: types.IS_ADMIN, payload: true });
             } else {
-              dispatch({
-                type: types.WALLET_ADDRESS,
-                payload: response[0],
-              });
+              dispatch({ type: types.WALLET_ADDRESS, payload: response[0] });
               dispatch({ type: types.WALLET, payload: type });
             }
-
             window.location.reload();
-          });
-          ethereum.on("chainChanged", (response: any) => {
+          };
+
+          const handleChainChanged = (response: any) => {
             dispatch({ type: types.WALLET_ADDRESS, payload: "" });
             dispatch({ type: types.WALLET, payload: "" });
-          });
-          return account;
+          };
+
+          ethereum.on("accountsChanged", handleAccountsChanged);
+          ethereum.on("chainChanged", handleChainChanged);
+
+          return () => {
+            ethereum.off("accountsChanged", handleAccountsChanged);
+            ethereum.off("chainChanged", handleChainChanged);
+          };
+        }, [ethereum, dispatch, getState, type]);
+
+        return account;
+      } else {
+        if (isMobile) {
+          Toast.error("Please connects through Wallet Connect");
+          return false;
         } else {
-          if (isMobile) {
-            Toast.error("Please connects through Wallet Connect");
-            return false;
-          } else {
-            Toast.error("Please install appropriate wallet");
-            return false;
-          }
+          Toast.error("Please install appropriate wallet");
+          return false;
         }
-      
+      }
     } catch (error: any) {
       dispatch({ type: types.WALLET_ADDRESS, payload: "" });
       dispatch({ type: types.WALLET, payload: "" });
@@ -148,7 +187,7 @@ export const disconnectWallet =
       // dispatch({ type: types.UKIYO_DETAILS, payload: '' });
       // dispatch({ type: types.USDT_DETAILS, payload: "" });
 
-      
+
       if (type === WALLETS.WALLET_CONNECT) {
         provider.disconnect();
       }
