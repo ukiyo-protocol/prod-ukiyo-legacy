@@ -91,13 +91,15 @@ const AboutSec = () => {
                 </div>
                 <h4>Ventures</h4>
                 <p>Become a disruptive investor via web3 and access start-ups and mid-stage projects</p>
-                <ButtonCustom className="btnGradient" title="Learn" />
+                <a href="https://docs.ukiyo.network/ukiyo/features-guide/ventures" rel="noreferrer" target="_blank">
+                  <ButtonCustom className="btnGradient" title="Learn" />
+                </a>
                 <div className="banner_img">
                   {/* <img src={Bannersecimg2} alt="product-logo" /> */}
                   {/* <Lottie animationData={URL.BASE_URL_LOTTIE + 'Ventures.json'} className="lottoe_sec" /> */}
                   {/* <Lottie animationData={URL.BASE_URL_LOTTIE + 'Ventures.json'} className="lottoe_sec" /> */}
                   {/* <div id="my-lottie-container" className="lottoe_sec" />; */}
-                  <Lottie animationData={jsonData} className="lottoe_sec" />
+                  <a href="" target="_blank"><Lottie animationData={jsonData} className="lottoe_sec" /></a>
                   {/* <img src={URL.BASE_URL_LOTTIE + 'Ventures.json'} /> */}
 
                 </div>
@@ -113,7 +115,9 @@ const AboutSec = () => {
                 </div>
                 <h4>Staking</h4>
                 <p>Earn passive income from the Vault. Stake KXO. Govern the protocol</p>
-                <ButtonCustom className="btnGradient" title="Learn" />
+                <a href="https://docs.ukiyo.network/ukiyo/features-guide/staking" rel="noreferrer" target="_blank">
+                  <ButtonCustom className="btnGradient" title="Learn" />
+                  </a>
                 <div className="banner_img">
                   {/* <img src={Bannersecimg1} alt="product-logo" /> */}
                   <Lottie animationData={jsonDataStaking} className="lottoe_sec" />
