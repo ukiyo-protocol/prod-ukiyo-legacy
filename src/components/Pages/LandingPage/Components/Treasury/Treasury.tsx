@@ -5,20 +5,10 @@ import CommonHeading from '../../../../common/CommonHeading/CommonHeading';
 import Lottie from "lottie-react";
 import starAnimation from "../../../../../assets/Animations/Star.json";
 import "./Treasury.scss";
+import Star from "../../../../../assets/Animations/Star.json";
 
 const Treasury = () => {
-    const [jsonDataStars, setJsonDataStars] = useState("")
-
-    useEffect(() => {
-        fetch(
-            "https://stage-ukiyo.s3.us-east-2.amazonaws.com/Animations/Star.json")
-            .then((res) => res.json())
-            .then((json) => {
-                console.log("JSON::>>>", json);
-                setJsonDataStars(json);
-            })
-    }, [])
-
+    
     return (
         <>
             <section className='treasury_sec'>
@@ -27,7 +17,7 @@ const Treasury = () => {
                         <Col lg={5} data-aos="fade-up">
                             <div className='treasury_sec_img'>
                                 {/* <img src={treasure} alt="" /> */}
-                                <Lottie animationData={jsonDataStars} />
+                                <Lottie animationData={Star} />
                                 {/* <Lottie animationData={starAnimation} width={200} height={200} />; */}
 
                                 <div className='coin text-center text-white'>

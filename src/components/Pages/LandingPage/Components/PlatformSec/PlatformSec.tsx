@@ -13,19 +13,9 @@ import heroAnimation from "../../../../../assets/Animations/HeroImageUkiyo.json"
 import ConnectWallet from "../../../../common/ConnectWallet/index";
 import Header from "../../../../common/Header/Header";
 import "./PlatformSec.scss";
+import HeroImageUkiyo from "../../../../../assets/Animations/HeroImageUkiyo.json";
 
 const PlatformSec = () => {
-  const [jsonDataHero, setJsonDataHero] = useState("")
-
-  useEffect(() => {
-    fetch(
-      "https://stage-ukiyo.s3.us-east-2.amazonaws.com/Animations/HeroImageUkiyo.json")
-      .then((res) => res.json())
-      .then((json) => {
-        console.log("JSON::>>>", json);
-        setJsonDataHero(json);
-      })
-  }, [])
 
   return (
     <section id="home_sec" className="platform_sec">
@@ -35,7 +25,7 @@ const PlatformSec = () => {
           <Col sm={12} md={12} lg={6} className="order-lg-1 mb-5 mb-lg-0">
             <div className="platform__right  text-center">
               {/* <img src={protocol_img} alt="protocol" /> */}
-              <Lottie animationData={jsonDataHero} />
+              <Lottie animationData={HeroImageUkiyo} />;
             </div>
 
           </Col>
@@ -70,10 +60,7 @@ const PlatformSec = () => {
         </Row>
       </Container>
 
-      <ConnectWallet
-
-
-      />
+      <ConnectWallet />
 
     </section>
   );
