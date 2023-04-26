@@ -23,7 +23,7 @@ function TheNews() {
     const fetchArticles = async () => {
       try {
         const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-        const targetUrl = "https://bowtiedbull.substack.com/feed";
+        const targetUrl = "https://ukiyolabs.substack.com/feed";
         const response = await axios.get(proxyUrl + targetUrl);
         const parsedData = await xml2js.parseStringPromise(response.data);
 
