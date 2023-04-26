@@ -17,7 +17,9 @@ const Governance = () => {
                         <Col>
                             <div className='governance_sec'>
                                 <p>AAve is a fully decentralised community governed protocol with 148,012 token holders.</p>
-                                <a href="https://snapshot.org/#/ukiyolabs.eth"><ButtonCustom title="Governance forum" /></a>
+                                <a href="https://snapshot.org/#/ukiyolabs.eth" target="_blank" rel="noreferrer">
+                                    <ButtonCustom title="Governance forum" />
+                                </a>
                             </div>
                         </Col>
                     </Row>

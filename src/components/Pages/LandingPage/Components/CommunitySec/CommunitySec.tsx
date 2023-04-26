@@ -21,7 +21,9 @@ const CommunitySec = () => {
                     title="Governed by the Community"
                 />
                 <p className="community_content">ukiyo is a protocol that is entirely decentralized and governed by its community</p>
-                <a href="https://snapshot.org/#/ukiyolabs.eth"><ButtonCustom className="btnGradient govern_btn" title="Governance Forum" /></a>
+                <a href="https://snapshot.org/#/ukiyolabs.eth" target="_blank" rel="noreferrer">
+                    <ButtonCustom className="btnGradient govern_btn" title="Governance Forum" />
+                </a>
                 <div className="community_img">
                     <img src={communityimg1} alt="community-img" />
                 </div>
