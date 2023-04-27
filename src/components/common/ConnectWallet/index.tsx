@@ -46,6 +46,7 @@ const ConnectWallet = ({ show, handleClose, isAdmin }: any) => {
 
     try {
       await dispatch(connectToWallet(WALLETS.METAMASK));
+      console.log(userDetails);
       // await dispatch(actionToGetUkiyoTokenDetails(userDetails?.wallet));
       // await dispatch(actionToGetUsdtTokenDetails(userDetails?.wallet, userDetails?.walletAddress));
     } catch (error) {
