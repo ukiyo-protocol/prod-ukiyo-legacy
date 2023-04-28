@@ -34,7 +34,7 @@ const Home = () => {
       <CommunitySec />
       <WorksSec />
       <Treasury />
-      <TheNews />
+      {/* <TheNews /> */}
       <Features />
       {/* <Features /> */}
       <Power />
