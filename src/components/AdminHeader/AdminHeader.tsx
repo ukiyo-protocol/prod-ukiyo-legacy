@@ -56,7 +56,10 @@ const AdminHeader = ({ headTitle }: props) => {
 
 
   useEffect(() => {
-    setShow(false);
+    if (userDetails?.walletAddress) {
+      setShow(false);
+      console.log(userDetails?.walletAddress)
+    }
   }, [userDetails?.walletAddress]);
 
 
