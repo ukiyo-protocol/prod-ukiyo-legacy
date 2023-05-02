@@ -21,9 +21,11 @@ const Home = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
   Aos.init({
     disable: "mobile",
   });
+
   return (
     <>
       <PlatformSec />

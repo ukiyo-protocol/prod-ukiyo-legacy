@@ -71,7 +71,10 @@ function TheNews() {
               View All Articles
             </a>
           </Col>
-          <Col lg={9} data-aos="fade-up">
+          <Col
+            lg={9}
+            // data-aos="fade-up"
+          >
             {data && data.map((item, key) => (
               <a
                 href={item.link}
