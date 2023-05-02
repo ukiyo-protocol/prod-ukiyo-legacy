@@ -64,9 +64,11 @@ function TheNews() {
               href="https://ukiyolabs.substack.com"
               target="_blank"
               rel="noreferrer"
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              className="btn-style btnGradient"
+              data-aos="fade-up"
+              style={{ textDecoration: 'none' }}
             >
-              <button className="btn-style btnGradient" data-aos="fade-up">View All Articles</button>
+              View All Articles
             </a>
           </Col>
           <Col lg={9} data-aos="fade-up">
