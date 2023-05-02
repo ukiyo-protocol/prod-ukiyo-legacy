@@ -22,14 +22,14 @@ function TheNews() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-        const targetUrl = "https://ukiyolabs.substack.com/feed";
-        const response = await axios.get(proxyUrl + targetUrl);
+        const proxyUrl = "https://proxy.ukiyo.network/rssProxy";
+        const response = await axios.get(proxyUrl);
         const parsedData = await xml2js.parseStringPromise(response.data);
 
         const items = parsedData.rss.channel[0].item.slice(0, 3).map((item) => {
           const contentEncoded = item["content:encoded"][0];
           const strippedContent = stripHTMLTags(contentEncoded).substr(0, 140);
+          const link = item.link[0];
 
           return {
             id: item.guid[0]._,
@@ -40,6 +40,7 @@ function TheNews() {
               day: "numeric",
               year: "numeric",
             }),
+            link,
             description: strippedContent + "...",
           };
         });
@@ -52,33 +53,6 @@ function TheNews() {
     fetchArticles();
   }, []);
 
-  // const data = [
-  //   {
-  //     id: 1,
-  //     title: "ukiyo Q4 2022 Report",
-  //     rightArrow: rightArrow,
-  //     date: "Aug 04, 2022",
-  //     description:
-  //       "In September 2021, ukiyo was conceptualized. Development swiftly began, and one year later we release our first report to help the community better understand on how the DAO is getting along.",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Phase I Seed Round – Private Sale",
-  //     rightArrow: rightArrow,
-  //     date: "Aug 04, 2022",
-  //     description:
-  //       " As we prepare for the launch of the private sale, find out how you can participate and help build a world defined by borderless capital that will act as a catalyst for wealth creation.",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Fundamentals: Encouraging Venture Investment On DeFi",
-  //     rightArrow: rightArrow,
-  //     date: "Aug 04, 2022",
-  //     description:
-  //       "The brainchild and founding vision of the ukiyo Protocol. Learn what it aims to achieve and how its roadmap will forever change the landscape of venture capital.",
-  //   },
-
-  // ];
 
   return (
     <div id="news_sec" className="The-NewsSec product_update">
@@ -90,7 +64,13 @@ function TheNews() {
           </Col>
           <Col lg={9} data-aos="fade-up">
             {data && data.map((item, key) => (
-              <a href={item.link} key={`index_${key}`} >
+              <a
+                href={item.link}
+                key={`index_${key}`}
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+                >
                 <div className="news-post">
                   {/* <Link to=""> */}
                   <div className="heading" data-aos="fade-up">
