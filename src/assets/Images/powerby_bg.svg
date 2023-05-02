@@ -4,8 +4,8 @@
       <rect id="Rectangle_8481" data-name="Rectangle 8481" width="596" height="509" transform="translate(1324 4381)" fill="none" stroke="#707070" stroke-width="1"/>
     </clipPath>
     <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#436f81"/>
-      <stop offset="1" stop-color="#0c2936" stop-opacity="0"/>
+      <stop offset="0" stopColor="#436f81"/>
+      <stop offset="1" stopColor="#0c2936" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="clip-path-2">
       <rect id="Rectangle_8482" data-name="Rectangle 8482" width="715" height="509" transform="translate(0 4381)" fill="none" stroke="#707070" stroke-width="1"/>
