@@ -60,7 +60,14 @@ function TheNews() {
         <Row>
           <Col className="fea_pro_heading" lg={3} data-aos="fade-up">
             <h2 className="text-dark">In The News</h2>
-            <button className="btn-style btnGradient" data-aos="fade-up">View All Articles</button>
+            <a
+              href="https://ukiyolabs.substack.com"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <button className="btn-style btnGradient" data-aos="fade-up">View All Articles</button>
+            </a>
           </Col>
           <Col lg={9} data-aos="fade-up">
             {data && data.map((item, key) => (
