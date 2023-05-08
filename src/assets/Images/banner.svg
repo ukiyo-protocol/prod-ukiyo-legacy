@@ -4,42 +4,42 @@
       <rect id="Rectangle_7094" data-name="Rectangle 7094" width="1920" height="329" transform="translate(0 0.064)" fill="none" stroke="#707070" stroke-width="1"/>
     </clipPath>
     <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stopColor="#436f81"/>
-      <stop offset="1" stopColor="#0c2936" stop-opacity="0"/>
+      <stop offset="0" stop-color="#436f81"/>
+      <stop offset="1" stop-color="#0c2936" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="clip-path-2">
       <rect id="Rectangle_7530" data-name="Rectangle 7530" width="1923" height="328.707" fill="none"/>
     </clipPath>
     <radialGradient id="radial-gradient-3" cx="0.491" cy="0.5" r="0.47" gradientUnits="objectBoundingBox">
-      <stop offset="0" stopColor="#75afe2"/>
-      <stop offset="0.32" stopColor="#4a6f90"/>
-      <stop offset="0.649" stopColor="#223443"/>
-      <stop offset="0.884" stopColor="#090e12"/>
+      <stop offset="0" stop-color="#75afe2"/>
+      <stop offset="0.32" stop-color="#4a6f90"/>
+      <stop offset="0.649" stop-color="#223443"/>
+      <stop offset="0.884" stop-color="#090e12"/>
       <stop offset="1"/>
     </radialGradient>
     <radialGradient id="radial-gradient-4" cx="0.5" cy="0.5" r="0.501" gradientUnits="objectBoundingBox">
-      <stop offset="0" stopColor="#0d3e69"/>
-      <stop offset="0.109" stopColor="#1f4c74"/>
-      <stop offset="0.331" stopColor="#507392"/>
-      <stop offset="0.645" stopColor="#9eb2c3"/>
-      <stop offset="1" stopColor="#fff"/>
+      <stop offset="0" stop-color="#0d3e69"/>
+      <stop offset="0.109" stop-color="#1f4c74"/>
+      <stop offset="0.331" stop-color="#507392"/>
+      <stop offset="0.645" stop-color="#9eb2c3"/>
+      <stop offset="1" stop-color="#fff"/>
     </radialGradient>
     <radialGradient id="radial-gradient-10" cx="0.491" cy="0.5" r="0.423" gradientUnits="objectBoundingBox">
-      <stop offset="0" stopColor="#75afe2"/>
-      <stop offset="0.377" stopColor="#74ade0"/>
-      <stop offset="0.515" stopColor="#70a8d9"/>
-      <stop offset="0.613" stopColor="#6a9fcd"/>
-      <stop offset="0.693" stopColor="#6191bc"/>
-      <stop offset="0.762" stopColor="#5680a6"/>
-      <stop offset="0.823" stopColor="#476b8a"/>
-      <stop offset="0.878" stopColor="#37526a"/>
-      <stop offset="0.929" stopColor="#233544"/>
-      <stop offset="0.974" stopColor="#0e151b"/>
+      <stop offset="0" stop-color="#75afe2"/>
+      <stop offset="0.377" stop-color="#74ade0"/>
+      <stop offset="0.515" stop-color="#70a8d9"/>
+      <stop offset="0.613" stop-color="#6a9fcd"/>
+      <stop offset="0.693" stop-color="#6191bc"/>
+      <stop offset="0.762" stop-color="#5680a6"/>
+      <stop offset="0.823" stop-color="#476b8a"/>
+      <stop offset="0.878" stop-color="#37526a"/>
+      <stop offset="0.929" stop-color="#233544"/>
+      <stop offset="0.974" stop-color="#0e151b"/>
       <stop offset="1"/>
     </radialGradient>
     <linearGradient id="linear-gradient" x1="1.129" y1="1.197" x2="0.212" y2="0.114" gradientUnits="objectBoundingBox">
-      <stop offset="0" stopColor="#234e60"/>
-      <stop offset="0.975" stopColor="#173442" stop-opacity="0"/>
+      <stop offset="0" stop-color="#234e60"/>
+      <stop offset="0.975" stop-color="#173442" stop-opacity="0"/>
       <stop offset="1" stop-opacity="0.8"/>
     </linearGradient>
   </defs>
