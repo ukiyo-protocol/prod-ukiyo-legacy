@@ -13,8 +13,17 @@ function TheNews() {
 
   // Function to clean html string from the description
   function stripHTMLTags(str) {
+    if (!str) {
+      return "";
+    }
+
     const div = document.createElement("div");
     div.innerHTML = str;
+
+    if (!div.childNodes.length) {
+      return "";
+    }
+
     const text = div.textContent || div.innerText || "";
     return text.replace(/<\/?[^>]+(>|$)/g, "");
   }
